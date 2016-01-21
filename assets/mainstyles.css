@@ -19,10 +19,10 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 1em;
     font: inherit;
     vertical-align: baseline;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
     color: #595959;
 }
 /* HTML5 display-role reset for older browsers */
@@ -54,7 +54,16 @@ table {
 Temporary
 */
 
-body{
+section{
+    height: 100vh;
+}
+
+#section1{
+    background: url(img/sample/bakery1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+#section2{
     background: url(img/sample/crousant.jpg) center center no-repeat;
     background-size: cover;
 }

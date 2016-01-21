@@ -1,10 +1,15 @@
 header{
     width: 100vw;
-    height: 25vh;
-    background-color: rgba(255, 255, 255, 0.8);
+    height: 20vh;
+    background-color: rgba(255, 255, 255, 0.9);
     -webkit-box-shadow: 0 8px 6px -6px black;
     -moz-box-shadow: 0 8px 6px -6px black;
     box-shadow: 0 0px 8px 0px black;
+    position: fixed;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    z-index: 9999;
 }
 
 header ul{
@@ -16,16 +21,16 @@ header ul{
 
 header ul li{
     transition: all 250ms ease;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
     padding: 1em 1em 1em 1em;
     margin: 1.3em 1.3em 1.3em 1.3em;
     font-weight: 300;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 header ul li:hover{
     margin: 1em 1.7em 1em 1.7em;
-    border-style: solid;
-    border-top-width: 0.2em;
 }
 
 header ul li a{
@@ -34,4 +39,12 @@ header ul li a{
 
 header ul li a:hover{
     color: black;
+}
+
+#logo{
+    font-weight: 700;
+}
+
+.shrink{
+    height: 8vh;
 }
