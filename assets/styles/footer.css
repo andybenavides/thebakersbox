@@ -1,0 +1,32 @@
+footer{
+    height: 40vh;
+    width: 100vw;
+}
+
+footer ul li{
+    display: inline;
+}
+
+footer a{
+    text-decoration: none;
+    margin: 1em 1em 1em 1em;
+}
+
+#social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    background-color: black;
+}
+
+#prof{
+    height: 30%;
+    background-color: #ff6c6c;
+}
+
+#social img{
+    width: 8vw;
+    height: 8vh;
+    margin: 0.5em -3em 0.5em -3em;
+}
