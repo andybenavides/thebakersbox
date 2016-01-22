@@ -21,6 +21,8 @@ $(document).on("scroll", function(){
 $(document).ready(function(){
     $(".contactForm").hide();
     $("#mail").click(function(){
-        $(".contactForm").toggle(50);
+        $(".contactForm").slideToggle(300, function(){
+            //
+        });
     });
 });
