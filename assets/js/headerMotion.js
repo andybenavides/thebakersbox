@@ -21,8 +21,16 @@ $(document).on("scroll", function(){
 $(document).ready(function(){
     $(".contactForm").hide();
     $("#mail").click(function(){
-        $(".contactForm").slideToggle(300, function(){
-            //
-        });
+        $(".contactForm").slideToggle(300);
     });
+});
+
+
+// fade out on scroll
+$(window).scroll(function(){
+    $("#section1").css("opacity", 1 - $(window).scrollTop() / 650);
+});
+
+$(window).load(function(){
+    $("header").css("opacity", 0 + $(window).scrollTop() / 550);
 });
