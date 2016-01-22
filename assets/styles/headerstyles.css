@@ -30,7 +30,8 @@ header ul li{
 }
 
 header ul li:hover{
-    margin: 1em 1.7em 1em 1.7em;
+    margin: 1em 1.4em 1em 1.4em;
+    font-size: 1.4em;
 }
 
 header ul li a{
@@ -38,7 +39,7 @@ header ul li a{
 }
 
 header ul li a:hover{
-    color: black;
+    color: #002833;
 }
 
 #logo{

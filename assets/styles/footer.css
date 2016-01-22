@@ -1,10 +1,17 @@
 footer{
-    height: 40vh;
+    height: 50vh;
     width: 100vw;
 }
 
 footer ul li{
     display: inline;
+    transition: all 250ms ease;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+}
+
+footer ul li:hover{
+    margin: 1em 0.3em 1em 0.3em;
 }
 
 footer a{
@@ -15,18 +22,64 @@ footer a{
 #social{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 70%;
-    background-color: black;
-}
-
-#prof{
-    height: 30%;
-    background-color: #ff6c6c;
+    background-color: #002833;
 }
 
 #social img{
+    transition: all 100ms ease;
+    -webkit-transition: all 100ms ease;
+    -moz-transition: all 100ms ease;
+    -o-transition: all 100ms ease;
+    -ms-transition: all 100ms ease;
     width: 8vw;
     height: 8vh;
-    margin: 0.5em -3em 0.5em -3em;
+    margin: 0.5em -0.5em 0.5em -0.5em;
+}
+
+#social img:hover{
+    width: 9vw;
+    height: 9vh;
+    opacity: 0.8;
+}
+
+#social a{
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    color: #999999;
+}
+
+#social a:hover{
+    color: white;
+}
+
+#bottom-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70%;
+    background: url("../img/sample/bakery-dark.jpg") center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#bottom-bottom p{
+    color: white;
+}
+
+#copy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.3em;
+    font-weight: 300;
+}
+
+#footerlogo{
+    font-size: 2em;
+    font-weight: 700;
 }

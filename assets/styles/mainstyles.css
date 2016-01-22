@@ -48,8 +48,6 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
-
 /*
 Temporary
 */
@@ -59,11 +57,11 @@ section{
 }
 
 #section1{
-    background: url(img/sample/bakery1.jpg) center center no-repeat;
+    background: url(../img/sample/bakery1.jpg) center center no-repeat;
     background-size: cover;
 }
 
 #section2{
-    background: url(img/sample/crousant.jpg) center center no-repeat;
+    background: url(../img/sample/crousant.jpg) center center no-repeat;
     background-size: cover;
 }
