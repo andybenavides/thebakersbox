@@ -23,15 +23,15 @@ header ul li{
     transition: all 250ms ease;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
-    padding: 1em 1em 1em 1em;
-    margin: 1.3em 1.3em 1.3em 1.3em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    margin: 0.5em 0.5em 0.5em 0.5em;
     font-weight: 300;
     font-size: 1.3em;
 }
 
 header ul li:hover{
-    margin: 1em 1.4em 1em 1.4em;
-    font-size: 1.4em;
+    margin: 1em 1em 1em 1em;
+    font-weight: 700;
 }
 
 header ul li a{
@@ -44,8 +44,10 @@ header ul li a:hover{
 
 #logo{
     font-weight: 700;
+    color: #002833;
 }
 
 .shrink{
     height: 8vh;
 }
+

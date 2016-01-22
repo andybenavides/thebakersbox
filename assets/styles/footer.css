@@ -54,7 +54,7 @@ footer a{
 }
 
 #social a:hover{
-    color: white;
+    color: #ff6666;
 }
 
 #bottom-bottom{
@@ -82,4 +82,74 @@ footer a{
 #footerlogo{
     font-size: 2em;
     font-weight: 700;
+}
+
+.contactFormHidden{
+    display: none;
+}
+
+.contactForm{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #002833;
+}
+
+.contact{
+    margin: 5vh 0vw 5vh 0vw;
+}
+
+.contact input{
+    display: flex;
+    margin: 1em 0em 1em 0em;
+    padding: 1em 1em 1em 1em;
+    width: 35vw;
+    height: 8vh;
+    box-shadow: inset 0px 0px 3px #000;
+    -moz-box-shadow: inset 0px 0px 3px #000;
+    -webkit-box-shadow: inset 0px 0px 3px #000;
+    background: white;
+    border: none;
+    font-size: 0.9em;
+}
+
+.contact textarea{
+    display: flex;
+    margin: 1em 0em 1em 0em;
+    padding: 1em 1em 1em 1em;
+    width: 35vw;
+    height: 18vh;
+    box-shadow: inset 0px 0px 3px #000;
+    -moz-box-shadow: inset 0px 0px 3px #000;
+    -webkit-box-shadow: inset 0px 0px 3px #000;
+    background: white;
+    border: none;
+    font-size: 0.9em;
+}
+
+.contact button{
+    display: flex;
+    margin: 1em 0em 1em 0em;
+    padding: 1vh 2.5vw;
+    width: 8vw;
+    height: 5vh;
+    box-shadow: inset 0px 0px 3px #000;
+    -moz-box-shadow: inset 0px 0px 3px #000;
+    -webkit-box-shadow: inset 0px 0px 3px #000;
+    background: white;
+    border: none;
+    font-size: 0.9em;
+}
+
+label{
+    color: #ff6666;
+}
+
+.formSide{
+    font-size: 1.5em;
+    height: 100%;
+}
+
+.formSide p{
+    color: #ff6666;
 }

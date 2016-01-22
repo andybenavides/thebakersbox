@@ -9,11 +9,18 @@ $(document).on("scroll", function(){
     if
     ($(document).scrollTop() > 100){
         $("header").addClass("shrink");
-        header.innerHTML = "bakers box";
+        header.innerHTML = "Bakers Box";
     }
     else
     {
         $("header").removeClass("shrink");
         header.innerHTML = "the<br>bakers<br>box<br>cafe";
     }
+});
+
+$(document).ready(function(){
+    $(".contactForm").hide();
+    $("#mail").click(function(){
+        $(".contactForm").toggle(50);
+    });
 });
