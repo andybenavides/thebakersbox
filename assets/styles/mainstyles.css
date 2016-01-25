@@ -22,8 +22,9 @@ time, mark, audio, video {
     font-size: 1em;
     font: inherit;
     vertical-align: baseline;
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Laila', serif;
     color: #595959;
+    text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -48,20 +49,49 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-/*
-Temporary
-*/
+
+#homePageSection{
+    background: url(../img/sample/cookies2dark.jpg) no-repeat center;
+    background-size: cover;
+    height: 50vh;
+}
 
 section{
     height: 90vh;
 }
 
-#section1{
-    background: url(../img/sample/bakery1.jpg) center center no-repeat;
+#cookieSection{
+    background: url("../img/sample/cookies.jpg") no-repeat center;
+    -webkit-background-size: cover;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#section2{
-    background: url(../img/sample/closecupcake.JPG) center center no-repeat;
-    background-size: cover;
+.inLink{
+    border-width: 0.6vh;
+    border-style: solid;
+    color: white;
+    font-size: 1em;
+    font-weight: 300;
+    padding: 1em 2em 1em 2em;
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+
+.inLink:hover{
+    box-shadow: 0px 0px 10px 0px #000;
+    font-size: 1.1em;
+}
+
+.miniSection{
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

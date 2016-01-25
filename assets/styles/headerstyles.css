@@ -1,14 +1,11 @@
 header{
     width: 100vw;
-    height: 20vh;
-    background-color: rgba(255, 255, 255, 0.9);
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0 8px 6px -6px black;
-    box-shadow: 0 0px 8px 0px black;
+    height: 30vh;
+    background-color: rgba(255, 255, 255, 0);
     position: fixed;
-    transition: all 0.7s ease;
-    -webkit-transition: all 0.7s ease;
-    -moz-transition: all 0.7s ease;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
     z-index: 9999;
 }
 
@@ -19,42 +16,44 @@ header ul{
     height: 100%;
 }
 
+header ul li a{
+    transition: all 150ms ease-in-out;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    text-decoration: none;
+    color: white;
+}
+
+header ul li a:hover{
+    color: #002833 !important;
+    margin: 0.3em 0.3em 0.3em 0.3em;
+}
+
 header ul li{
-    transition: all 250ms ease;
-    -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
     padding: 0.5em 0.5em 0.5em 0.5em;
-    margin: 0.5em 0.5em 0.5em 0.5em;
+    margin: 0em 2vw 0em 2vw;
     font-weight: 300;
     font-size: 1.3em;
 }
 
-header ul li:hover{
-    margin: 1em 1em 1em 1em;
-    font-weight: 700;
-}
-
-header ul li a{
-    text-decoration: none;
-}
-
-header ul li a:hover{
-    color: #002833;
-}
-
 #logo{
-    font-weight: 700;
-    color: #002833;
+    font-weight: 600;
+    font-size: 1.3em;
 }
 
 .shrink{
-    height: 8vh;
+    height: 15vh;
+    background-color: white;
 }
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
+.MenuLinkStyle{
+    font-size: 0.9em;
+    color: #595959;
+}
 
 header {
     opacity:0;
@@ -69,22 +68,4 @@ header {
     -webkit-animation-duration:500ms;
     -moz-animation-duration:500ms;
     animation-duration:500ms;
-}
-
-header.one {
-    -webkit-animation-delay: 0.7s;
-    -moz-animation-delay: 0.7s;
-    animation-delay: 0.7s;
-}
-
-header.two {
-    -webkit-animation-delay: 1.2s;
-    -moz-animation-delay:1.2s;
-    animation-delay: 1.2s;
-}
-
-header.three {
-    -webkit-animation-delay: 1.6s;
-    -moz-animation-delay: 1.6s;
-    animation-delay: 1.6s;
 }
