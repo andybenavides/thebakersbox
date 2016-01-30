@@ -1,6 +1,7 @@
 footer{
     height: 50vh;
     width: 100vw;
+    font-size: 0.8em;
 }
 
 footer ul li{
@@ -11,7 +12,7 @@ footer ul li{
 }
 
 footer ul li:hover{
-    margin: 1em 0.3em 1em 0.3em;
+    margin: 0em 0.3em 0em 0.3em;
 }
 
 footer a{
@@ -23,7 +24,7 @@ footer a{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 70%;
+    height: 30vh;
     background-color: #002833;
 }
 
@@ -39,8 +40,6 @@ footer a{
 }
 
 #social img:hover{
-    width: 9vw;
-    height: 9vh;
     opacity: 0.8;
 }
 

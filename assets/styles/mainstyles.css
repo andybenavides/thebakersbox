@@ -22,7 +22,7 @@ time, mark, audio, video {
     font-size: 1em;
     font: inherit;
     vertical-align: baseline;
-    font-family: 'Laila', serif;
+    font-family: 'Lato', sans-serif;
     color: #595959;
     text-decoration: none;
 }
@@ -51,22 +51,21 @@ table {
 }
 
 #homePageSection{
-    background: url(../img/sample/cookies2dark.jpg) no-repeat center;
-    background-size: cover;
-    height: 50vh;
+    height: 100vh;
+    position: fixed;
 }
 
 section{
-    height: 90vh;
+    height: 70vh;
 }
 
 #cookieSection{
-    background: url("../img/sample/cookies.jpg") no-repeat center;
-    -webkit-background-size: cover;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    background: url("../img/sample/bakery1.jpg") no-repeat top center;
 }
 
 .inLink{
@@ -88,10 +87,13 @@ section{
     font-size: 1.1em;
 }
 
-.miniSection{
-    height: 40vh;
+.indentSection{
+    height: 90vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url(../img/sample/cookies.jpg) no-repeat top center;
+    background-size: cover;
+    color: white;
 }

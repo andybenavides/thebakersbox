@@ -1,30 +1,29 @@
-/**
- * Created by andybenavides on 1/21/16.
- */
-
-$(document).on("scroll", function(){
-
-    var header = document.getElementById("logo");
-    var links = document.getElementsByClassName("MenuLink");
-    var logo = document.getElementById("logo");
-
-    if ($(document).scrollTop() > 100){
-        $("header").addClass("shrink");
-        header.innerHTML = "the<br>bakers box<br>cafe";
-        for(i=0; i<6; i++) {
-            $(links[i]).addClass("MenuLinkStyle");
-        }
-        logo.style.color = "black";
-    }
-    else {
-        $("header").removeClass("shrink");
-        header.innerHTML = "the<br>bakers<br>box<br>cafe";
-        for(i=0; i<6; i++) {
-            $(links[i]).removeClass("MenuLinkStyle");
-        }
-        logo.style.color = "white";
-    }
-});
+///**
+// * Created by andybenavides on 1/21/16.
+// */
+//
+//$(document).on("scroll", function(){
+//
+//    var logoheader = document.getElementById("logo");
+//    var links = document.getElementsByClassName("MenuLink");
+//
+//    if ($(document).scrollTop() > 170){
+//        $("header").addClass("shrink");
+//        logoheader.innerHTML = "bakers<br>box";
+//        for(i=0; i<6; i++) {
+//            $(links[i]).addClass("MenuLinkStyle");
+//        }
+//        logoheader.style.color = "#002833";
+//    }
+//    else {
+//        $("header").removeClass("shrink");
+//        logoheader.innerHTML = "the<br>bakers<br>box<br>cafe";
+//        for(i=0; i<6; i++) {
+//            $(links[i]).removeClass("MenuLinkStyle");
+//        }
+//        logoheader.style.color = "white";
+//    }
+//});
 
 $(document).ready(function(){
     $(".contactForm").hide();
@@ -39,13 +38,13 @@ $(document).ready(function(){
 });
 
 
-// fade out on scroll
+//fade out on scroll
 //$(window).scroll(function(){
-//    $("#homePageSection").css("opacity", 1 - $(window).scrollTop() / 650);
+//    $(".indentSection").css("opacity", 1 - $(window).scrollTop() / 250);
+//})
+//
+//$(window).load(function(){
+//    $("header").css("opacity", 0 + $(window).scrollTop() / 150);
 //});
-
-$(window).load(function(){
-    $("header").css("opacity", 0 + $(window).scrollTop() / 550);
-});
-
-
+//
+//
