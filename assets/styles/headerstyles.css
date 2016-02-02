@@ -1,7 +1,7 @@
 header{
     width: 100vw;
     background-color: white;
-    height: 8vh;
+    height: 9vh;
     z-index: 1000;
     position: fixed;
 }
@@ -41,7 +41,7 @@ header > nav > ul > li a + div > ul > li > a {
 }
 
 header > nav > ul > li a + div > ul > li > a:hover {
-    color: #ff6666;
+    color: #3b5998;
 }
 
 #menu-list-1{
@@ -52,7 +52,6 @@ header > nav > ul > li a + div > ul > li > a:hover {
 #menu-list-2{
     display: flex;
     align-items: center;
-
 }
 
 #menu-list-1 li{
@@ -64,9 +63,10 @@ header > nav > ul > li a + div > ul > li > a:hover {
 }
 
 #menu-list-2 > li > a > img{
-    height: 3vh;
-    width: 3vw;
+    height: 2.5vh;
+    width: 2.5vw;
 }
+
 
 a div, a img{
     -webkit-transition: all 250ms ease;
@@ -76,8 +76,8 @@ a div, a img{
     transition: all 250ms ease;
 }
 
-a div:hover, a img:hover{
-    color: #ff6666;
+header a div:hover, header a img:hover{
+    color: #3b5998;
     margin: 0vh 0.5vw 0vh 0.5vw;
 }
 

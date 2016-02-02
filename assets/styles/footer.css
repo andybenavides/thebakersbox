@@ -25,7 +25,7 @@ footer a{
     align-items: center;
     justify-content: space-around;
     height: 30vh;
-    background-color: #002833;
+    background-color: white;
 }
 
 #social img{
@@ -49,11 +49,11 @@ footer a{
     -ms-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
-    color: #999999;
+    color: black;
 }
 
 #social a:hover{
-    color: #ff6666;
+    color: #3b5998;
 }
 
 #bottom-bottom{
@@ -91,7 +91,7 @@ footer a{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #002833;
+    background-color: white;
 }
 
 .contact{
@@ -141,7 +141,7 @@ footer a{
 }
 
 label{
-    color: #ff6666;
+    color: #3b5998;
 }
 
 .formSide{
@@ -150,6 +150,6 @@ label{
 }
 
 .formSide p{
-    color: #ff6666;
+    color: #3b5998;
 }
 

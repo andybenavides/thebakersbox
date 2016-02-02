@@ -93,7 +93,34 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     background: url(../img/sample/cookies.jpg) no-repeat top center;
     background-size: cover;
     color: white;
+}
+
+.indentHeader{
+    font-size: 3em;
+    color: white;
+    font-family: 'Lora', serif;
+}
+
+.indentLink{
+    border: 1px solid white;
+    padding: 3vh 6vw 3vh 6vw;
+    margin: 4vh 5vw 4vh 5vw;
+    font-weight: 300;
+}
+
+.indentLink div{
+    color: white;
+}
+
+.indentLink:hover div img{
+    position: relative;
+    left: 1vw;
+}
+
+.arrow-right{
+    width: 1vw;
 }
