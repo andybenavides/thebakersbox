@@ -59,15 +59,6 @@ section{
     height: 70vh;
 }
 
-#cookieSection{
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: url("../img/sample/bakery1.jpg") no-repeat top center;
-}
-
 .inLink{
     border-width: 0.6vh;
     border-style: solid;
@@ -87,40 +78,85 @@ section{
     font-size: 1.1em;
 }
 
-.indentSection{
+.cookieWrapper{
     height: 90vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: url(../img/sample/cookies.jpg) no-repeat top center;
+    background: url(../img/sample/cookies.jpg) no-repeat fixed top center;
     background-size: cover;
     color: white;
 }
 
-.indentHeader{
+.cookieHeader{
     font-size: 3em;
     color: white;
     font-family: 'Lora', serif;
 }
 
-.indentLink{
+.cookieLink{
     border: 1px solid white;
     padding: 3vh 6vw 3vh 6vw;
     margin: 4vh 5vw 4vh 5vw;
     font-weight: 300;
 }
 
-.indentLink div{
+.cookieLink div{
     color: white;
 }
 
-.indentLink:hover div img{
+.cookieLink:hover div img{
     position: relative;
     left: 1vw;
 }
 
 .arrow-right{
     width: 1vw;
+}
+
+.cup-cake-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: url("../img/sample/birthday-cupckake.jpg") no-repeat bottom;
+    background-size: cover;
+    padding: 0vh 5vw 0vh 10vw;
+}
+
+.pastryWrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(../img/sample/cookies2.jpg) no-repeat fixed center bottom;
+    background-size: auto;
+    color: white;
+}
+
+.cakeWrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: url("../img/sample/cupcakeUnfinished.jpg") no-repeat center;
+    background-size: cover;
+    padding: 0vh 5vw 0vh 10vw;
+}
+
+.about{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(../img/sample/ingrediants.jpg) repeat-y fixed center bottom;
+    background-size: cover;
 }

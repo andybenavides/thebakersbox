@@ -3,7 +3,6 @@ header{
     background-color: white;
     height: 9vh;
     z-index: 1000;
-    position: fixed;
 }
 
 nav{
@@ -31,6 +30,8 @@ header > nav > ul > li a + div {
 
 header > nav > ul > li:hover a + div {
     display: block;
+    background-color: white;
+    z-index: 1000;
 }
 
 header > nav > ul > li a + div > ul > li > a {
@@ -76,9 +77,21 @@ a div, a img{
     transition: all 250ms ease;
 }
 
-header a div:hover, header a img:hover{
+header a div:hover{
     color: #3b5998;
-    margin: 0vh 0.5vw 0vh 0.5vw;
+    padding: 0vh 0vw 0.8vh 0vw;
+}
+
+header a img{
+    filter: gray;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+header a img:hover{
+    filter: none;
+    filter: opacity(0);
+    -webkit-filter: grayscale(0);
 }
 
 #logo{

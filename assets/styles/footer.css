@@ -26,6 +26,7 @@ footer a{
     justify-content: space-around;
     height: 30vh;
     background-color: white;
+    background-attachment: fixed;
 }
 
 #social img{
@@ -37,10 +38,15 @@ footer a{
     width: 8vw;
     height: 8vh;
     margin: 0.5em -0.5em 0.5em -0.5em;
+    filter: gray;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
 }
 
 #social img:hover{
-    opacity: 0.8;
+    filter: none;
+    filter: opacity(0);
+    -webkit-filter: grayscale(0);
 }
 
 #social a{
@@ -61,7 +67,7 @@ footer a{
     align-items: center;
     justify-content: space-around;
     height: 70%;
-    background: url("../img/sample/bakery-dark.jpg") center center no-repeat;
+    background: url("../img/sample/bakery-dark.jpg") no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
 }

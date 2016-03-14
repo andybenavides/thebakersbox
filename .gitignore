@@ -99,4 +99,10 @@ _testmain.go
 # Google App Engine generated folder
 appengine-generated/
 
+# I don’t want pictures to be included
+*.jpg
+*.jpeg
+*.svg
+*.png
+
 # Created by .ignore support plugin (hsz.mobi)
