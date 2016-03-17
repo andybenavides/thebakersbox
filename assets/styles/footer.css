@@ -27,6 +27,8 @@ footer a{
     height: 30vh;
     background-color: white;
     background-attachment: fixed;
+    position: relative;
+    z-index: 1;
 }
 
 #social img{
@@ -45,8 +47,9 @@ footer a{
 
 #social img:hover{
     filter: none;
-    filter: opacity(0);
+    filter: opacity(0.6);
     -webkit-filter: grayscale(0);
+    cursor: hand;
 }
 
 #social a{
@@ -70,6 +73,8 @@ footer a{
     background: url("../img/sample/bakery-dark.jpg") no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
+    position: relative;
+    z-index: 1;
 }
 
 #bottom-bottom p{
