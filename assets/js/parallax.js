@@ -4,17 +4,16 @@
 
 (function () {
 
-    var parallax = document.querySelectorAll(".parallax"),
-        speed = 0.3;
+    var parallax = document.querySelectorAll(".parallax"), speed = 0.15;
 
     window.onscroll = function () {
 
         [].slice.call(parallax).forEach(function (el) {
 
             var windowYOffset = window.pageYOffset,
-                elBackgroundPos = "90%" + (-windowYOffset * speed) + "px";
+                elBackgroundPos = "0%" + (-windowYOffset * speed) + "px";
 
-            el.style.backgroundPosition = elBackgroundPos
+            el.style.backgroundPosition = elBackgroundPos;
 
         });
     };

@@ -9,8 +9,8 @@ $(document).ready(function(){
         $(".contactForm").slideToggle(300);
     });
 
-    $(window).scroll(function(){
-        $(".mainHeader").css("opacity", 1 - $(window).scrollTop() / 350);
-    });
+    $(window).scroll(function() {
+        $(".mainHeader").css("opacity", 1 - $(window).scrollTop() / 650);
+    })
 });
 

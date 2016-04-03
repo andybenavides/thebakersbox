@@ -1,12 +1,36 @@
 .navigation {
     position: fixed;
     z-index: 0;
-    /* non-critical appearance styles */
-    list-style: none;
     height: 100vh;
-    background-color: white;
+    background-color: #ECECEA;
     width: 25vw;
-    -webkit-box-shadow: 10px 0px 5px -2px #888;
+}
+
+.nav-item::after{
+    content: '';
+    display: block;
+    width: 2vw;
+    height: 1px;
+    margin: 0 auto;
+    background-color: rgba(217,133,59,0.4);
+}
+
+@media(max-width: 768px) and (orientation: portrait) {
+    .navigation {
+        width: 85vw;
+    }
+
+    .nav-trigger:checked + label {
+        margin: 2vh 85vw !important;
+    }
+
+    .nav-trigger:checked ~ .site-wrap {
+        left: 80vw !important;
+    }
+
+    .nav-item a {
+        width: 55vw !important;
+    }
 }
 
 .nav-item {
@@ -19,7 +43,7 @@
 #navLinks{
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     height: 100vh;
 }
@@ -27,19 +51,24 @@
 .nav-item a {
     display: flex;
     justify-content: center;
-    width: 10vw;
-    color: black;
-    font-size: 1.5em;
-    -webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
-    transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
-    padding: 4vh 2vw;
+    align-items: center;
+    flex-direction: column;
+    width: 23vw;
+    color: #558C89;
+    font-size: 3vh;
+    -webkit-transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+    padding: 3vh 2vw;
     font-family: 'Lora', serif;
-    border-bottom: 1px solid gainsboro;
-
+    /*border: 1px solid gainsboro;*/
 }
 
 .nav-item a:hover {
-    color: #3b5998;
+    background-color: white;
+}
+
+.nav-item a:hover::after{
+    width: 10px;
 }
 
 .site-wrap {
@@ -53,6 +82,9 @@
     bottom: 100%;
     left: 0;
     z-index: 1;
+    -webkit-box-shadow: -1px 0 2px #888;
+    -moz-box-shadow: -1px 0 2px #888;
+    box-shadow: -1px 0 2px #888;
 }
 
 .nav-trigger {
@@ -63,14 +95,11 @@
 label[for="nav-trigger"] {
     /* critical positioning styles */
     position: fixed;
-    left: 2vw;
     z-index: 3;
-    /* non-critical appearance styles */
-    height: 10vh;
-    width: 3vw;
     cursor: pointer;
-    font-size: 4em;
+    font-size: 3em;
     color: white;
+    margin: 2vh 2vw;
 }
 
 label[for="nav-trigger"]:hover{
@@ -83,12 +112,16 @@ label[for="nav-trigger"]:hover{
 
 .nav-trigger + label,
 .site-wrap {
-    -webkit-transition: left 250ms;
-    transition: left 250ms;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
+
 .nav-trigger:checked + label {
-    left: 28vw;
+    margin: 2vh 28vw;
 }
 
 .nav-trigger:checked ~ .site-wrap {
@@ -96,36 +129,24 @@ label[for="nav-trigger"]:hover{
 }
 
 body {
-    /* Without this, the body has excess horizontal scroll when the menu is open */
     overflow-x: hidden;
 }
 
-#socialIcons{
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: row;
-    z-index: 2;
-    margin:-3vh 1vw;
-    width: 98vw;
-    height: 17vh;
+.mainHeaderNav{
+    position: relative;
+    font-size: 2em;
+    color: #D9853B;
+    font-family: 'Lora', serif;
+    text-align: center;
 }
 
-#socialIcons ul li{
-    display: inline-flex;
-    margin: 0vh 0.2vw;
+.mainHeaderNav span{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #558C89;
+    font-size: 1.8em;
 }
 
-#socialIcons ul li a img{
-    width: 3vw;
-}
-
-.nav-itemLogo{
-    padding: 2vh 0vw 6vh 0vw;
-    font-size: 3em;
-}
-
-.nav-itemLogo a{
-    color: black;
+.navItemLogo{
+    padding: 8vh 0vw 5vh 0vw;
 }

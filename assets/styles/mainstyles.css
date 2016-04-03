@@ -54,23 +54,29 @@ table {
     height: 100vh;
     width: 100vw;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: url(../img/sample/ingrediantsDark.jpg) no-repeat top center;
+    background: url(../img/main.jpg) no-repeat top left;
     background-size: cover;
     color: white;
 }
 
-#mainTag{
-    padding: 10vh 10vw;
+.mainHeader{
+    position: relative;
+    font-size: 6em;
+    color: #D9853B;
+    font-family: 'Lora', serif;
+    text-align: center;
+    /*background-color: rgba(0,0,0,0.4);*/
+    width: 100vw;
 }
 
-.mainHeader{
-    font-size: 3em;
-    color: white;
-    font-family: 'Lora', serif;
-
+.mainHeader span{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #ECECEA;
+    font-size: 1em;
 }
 
 .about{
@@ -84,5 +90,58 @@ table {
     background-size: cover;
 }
 
+.tiles{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    color: black;
+    padding: 1vh 0vw;
+}
 
+@media(max-width: 768px){
+    .tiles{
+        flex-direction: column;
+    }
 
+    .tile{
+        width: 100vw !important;
+        height: 60vh;
+        margin: 0.5vh 0vw 0.5vw 0vh !important;
+    }
+}
+
+.tile{
+    height: 70vh;
+    width: 32.5vw;
+    background: url("../img/sample/cookies2dark.jpg") no-repeat center bottom;
+    background-size: cover;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    opacity: 0.9;
+}
+
+.tile:hover{
+    width: 34vw;
+    cursor: hand;
+    opacity: 1;
+}
+
+.tileHeader{
+    color: white;
+    padding: 2vh 3vw;
+}
+
+.bakersBoxAbout{
+    height: 90vh;
+    background: url("../img/easterCookies.jpg") no-repeat center top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    font-size: 1em;
+}
