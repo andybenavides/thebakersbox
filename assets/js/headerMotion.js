@@ -8,9 +8,5 @@ $(document).ready(function(){
     $("#mail").click(function(){
         $(".contactForm").slideToggle(300);
     });
-
-    $(window).scroll(function() {
-        $(".mainHeader").css("opacity", 1 - $(window).scrollTop() / 650);
-    })
 });
 
