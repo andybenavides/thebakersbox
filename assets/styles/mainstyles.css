@@ -26,32 +26,38 @@ time, mark, audio, video {
     color: white;
     text-decoration: none;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-.mainWrapper{
-    height: 100vh;
+.mainWrapper {
+    height: 80vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -62,99 +68,84 @@ table {
     color: white;
 }
 
-.mainHeader{
+#mainHeader {
     position: relative;
     font-size: 7em;
-    color: #D88A8A;
-    font-family: 'Lora', serif;
+    color: #bfd8d2;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
-    width: 100vw;
 
-    -moz-animation-name: dropHeader;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: ease-in;
-    -moz-animation-duration: 2500ms;
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
 
-    -webkit-animation-name: dropHeader;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 2500ms;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 
-    animation-name: dropHeader;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 2500ms;
-
-    /*-webkit-animation: fadein 2s; /!* Safari, Chrome and Opera > 12.1 *!/*/
-    /*-moz-animation: fadein 2s; /!* Firefox < 16 *!/*/
-    /*-ms-animation: fadein 2s; /!* Internet Explorer *!/*/
-    /*-o-animation: fadein 2s; /!* Opera < 12.1 *!/*/
-    /*animation: fadein 2s;*/
+    -webkit-animation-duration: 1500ms;
+    -moz-animation-duration: 1500ms;
+    animation-duration: 1500ms;
 }
-
-@-moz-keyframes dropHeader {
-    0% {
-        -moz-transform: translateY(-10px);
-    }
-    100% {
-        -moz-transform: translateY(0);
-    }
-}
-@-webkit-keyframes dropHeader {
-    0% {
-        -webkit-transform: translateY(-10px);
-    }
-    100% {
-        -webkit-transform: translateY(0);
-    }
-}
-@keyframes dropHeader {
-    0% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Opera < 12.1 */
 @-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.mainHeader span{
-    font-family: 'Oswald', sans-serif;
+#mainHeader span {
+    font-family: 'Lora', serif;
     font-weight: 400;
     color: #FFFFFF;
     font-size: 1em;
 }
 
-.about{
+.about {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -165,82 +156,13 @@ table {
     background-size: cover;
 }
 
-.bakersBoxAbout{
+.bakersBoxAbout {
     height: 90vh;
     background: url("../img/easterCookies.jpg") no-repeat center top;
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content:center;
-    flex-direction: column;
-    font-size: 1em;
-}
-
-.productPane{
-    height: 120vh;
-    display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.productPane p{
-    color: #474843;
-}
-
-.productPane p a{
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    border: 4px solid #9D9D93;
-    padding: 3vh 4vw;
-    color: #9D9D93;
     font-size: 1em;
-    position: relative;
-    -webkit-transition: color 0.25s ease;
-    -moz-transition: color 0.25s ease;
-    -ms-transition: color 0.25s ease;
-    -o-transition: color 0.25s ease;
-    transition: color 0.25s ease;
-}
-
-.productPane p a::after{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #9D9D93;
-    -webkit-transition: width 0.25s ease;
-    -moz-transition: width 0.25s ease;
-    -ms-transition: width 0.25s ease;
-    -o-transition: width 0.25s ease;
-    transition: width 0.25s ease;
-    z-index: -1;
-}
-
-.productPane p a:hover{
-    color: white;
-}
-
-.productPane p a:hover::after{
-    width: 100%;
-}
-
-.productBox{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    width: 80vw;
-    margin: 5vh auto;
-}
-
-.productBox img{
-    -webkit-box-shadow:  0px 0px 3px black;
-    -moz-box-shadow:  0px 0px 3px black;
-    box-shadow:  0px 0px 3px black;
-    width: 30vw;
-    height: 50vh;
-    margin: 0vh 4vw;
 }
