@@ -57,7 +57,7 @@ table {
 }
 
 .mainWrapper {
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -71,22 +71,76 @@ table {
 #mainHeader {
     position: relative;
     font-size: 7em;
-    color: #bfd8d2;
+    color: white;
     font-family: 'Oswald', sans-serif;
     text-align: center;
 
-    opacity: 0;
-    -webkit-animation: fadeIn ease-in 1;
-    -moz-animation: fadeIn ease-in 1;
-    animation: fadeIn ease-in 1;
+    /*Main Header Fade In CSS*/
+    /*-webkit-animation: fadeIn ease-in 1;*/
+    /*-moz-animation: fadeIn ease-in 1;*/
+    /*animation: fadeIn ease-in 1;*/
 
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+    /*-webkit-animation-fill-mode: forwards;*/
+    /*-moz-animation-fill-mode: forwards;*/
+    /*animation-fill-mode: forwards;*/
 
-    -webkit-animation-duration: 1500ms;
-    -moz-animation-duration: 1500ms;
-    animation-duration: 1500ms;
+    /*-webkit-animation-duration: 1500ms;*/
+    /*-moz-animation-duration: 1500ms;*/
+    /*animation-duration: 1500ms;*/
+
+    -webkit-animation-name: logoMotion;
+    -moz-animation-name: logoMotion;
+    -o-animation-name: logoMotion;
+    animation-name: logoMotion;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    -o-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+
+}
+
+@keyframes logoMotion {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes logoMotion {
+    0% {
+        -webkit-transform: translateY(10px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+    }
+}
+
+@-ms-keyframes logoMotion {
+    0% {
+        -ms-transform: translateY(10px);
+    }
+    100% {
+        -ms-transform: translateY(0px);
+    }
+}
+
+@-moz-keyframes logoMotion {
+    0% {
+        -moz-transform: translateY(10px);
+    }
+    100% {
+        -moz-transform: translateY(0px);
+    }
 }
 
 @keyframes fadein {
@@ -138,31 +192,63 @@ table {
     }
 }
 
-#mainHeader span {
+#mainHeader div {
     font-family: 'Lora', serif;
     font-weight: 400;
-    color: #FFFFFF;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
-.about {
-    height: 100vh;
-    width: 100vw;
+#about {
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background: url(../img/sample/ingrediants.jpg) repeat-y fixed center bottom;
-    background-size: cover;
+    flex-direction: row;
+    background-color: white;
+    line-height: 2;
+
 }
 
-.bakersBoxAbout {
-    height: 90vh;
-    background: url("../img/easterCookies.jpg") no-repeat center top;
-    background-size: cover;
+#about * {
+    margin: 2vh 4vw;
+}
+
+#about span {
+    margin: 0 auto;
+    color: #b56357;
+    font-size: 1.7rem;
+    font-family: 'Lora', serif;
+}
+
+#bio {
+    max-width: 40vw;
+    color: black;
+    font-weight: 300;
+}
+
+#contactButton {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    font-size: 1em;
+    max-width: 40vw;
+    text-align: center;
+}
+
+#contactButton div a{
+    padding: 1vh 2vw;
+    font-size: 0.8rem;
+    background-color: #a7b3a5;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+#contactButton div a:hover{
+    background-color: #b56357;
+}
+
+#letsTalk{
+    font-size: 1rem !important;
+    color: black !important;
 }

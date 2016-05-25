@@ -17,7 +17,7 @@ $(document).on("scroll", function () {
     var logo = document.getElementById("logo");
     var mainHeader = document.getElementById("mainHeader");
 
-    if ($(document).scrollTop() > 150) {
+    if ($(document).scrollTop() > 100) {
         $("header").addClass("shrink");
         $(logo).show();
         for (i = 0; i < 6; i++) {
