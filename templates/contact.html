@@ -1,0 +1,18 @@
+{{ template "header"}}
+
+<div class="contactPage">
+	<form action="/sendEmail" method="POST">
+		<fieldset>
+			<input id="firstName" placeholder="First Name" type="text">
+			<input id="LastName" placeholder="Last Name" type="text">
+			<input id="email" name="email" placeholder="Email Address" type="email">
+		</fieldset>
+		<fieldset>
+			<input id="subject" placeholder="Subject" type="text">
+			<textarea id="message" placeholder="Message"></textarea>
+		</fieldset>
+		<button id="submit" type="submit">send</button>
+	</form>
+</div>
+
+{{ template "footer"}}

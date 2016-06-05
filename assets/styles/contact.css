@@ -1,0 +1,43 @@
+.contactPage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 80vh;
+    width: 100vw;
+    background: url("../../assets/img/TheBakersBoxCookieDark2.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.contactPage fieldset{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 2vh auto;
+}
+
+.contactPage fieldset *{
+    margin: 2vh 0;
+}
+
+.contactPage form {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 5vw;
+}
+
+.contactPage form span {
+    display: flex;
+    flex-direction: row;
+}
+
+.contactPage form input{
+    border: none;
+    height: 5vh;
+    width: 30vw;
+}
+
+textarea {
+    resize: none;
+}

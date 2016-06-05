@@ -4,35 +4,37 @@
 
 
 $(document).ready(function () {
-    $(".contactForm").hide();
-    $("#mail").click(function () {
-        $(".contactForm").slideToggle(300);
+
+    $("#breadButton").click(function () {
+        $(this).addClass("clickedButton")
+            .siblings('[type="button"]')
+            .removeClass("clickedButton");
+        $("#breadSection").addClass("notHidden")
+            .siblings()
+            .removeClass("notHidden");
+    });
+
+    $("#cookiesButton").click(function () {
+        $(this).addClass("clickedButton")
+            .siblings('[type="button"]')
+            .removeClass("clickedButton");
+        $("#cookiesSection").addClass("notHidden").siblings().removeClass("notHidden");
+    });
+
+    $("#cupcakesButton").click(function () {
+        $(this).addClass("clickedButton")
+            .siblings('[type="button"]')
+            .removeClass("clickedButton");
+        $("#cupcakesSection").addClass("notHidden").siblings().removeClass("notHidden");
+
+    });
+
+    $("#rollsButton").click(function () {
+        $(this).addClass("clickedButton")
+            .siblings('[type="button"]')
+            .removeClass("clickedButton");
+        $("#rollsSection").addClass("notHidden").siblings().removeClass("notHidden");
+
     });
 });
 
-
-$(document).on("scroll", function () {
-
-    var links = document.getElementsByClassName("MenuLink");
-    var logo = document.getElementById("logo");
-    var mainHeader = document.getElementById("mainHeader");
-
-    if ($(document).scrollTop() > 100) {
-        $("header").addClass("shrink");
-        $(logo).show();
-        for (i = 0; i < 6; i++) {
-            $(links[i]).addClass("MenuLinkStyle");
-        }
-        logo.style.color = "black";
-        $(mainHeader).fadeOut();
-    }
-    else {
-        $("header").removeClass("shrink");
-        $(logo).hide();
-        for (i = 0; i < 6; i++) {
-            $(links[i]).removeClass("MenuLinkStyle");
-        }
-        logo.style.color = "white";
-        $(mainHeader).fadeIn();
-    }
-});

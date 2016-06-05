@@ -1,167 +1,39 @@
-footer{
-    height: 50vh;
+footer {
+    height: 30vh;
     width: 100vw;
     font-size: 0.8em;
-}
-
-footer ul li{
-    display: inline;
-    transition: all 250ms ease;
-    -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-}
-
-footer ul li:hover{
-    margin: 0em 0.3em 0em 0.3em;
-}
-
-footer a{
-    text-decoration: none;
-    margin: 1em 1em 1em 1em;
-}
-
-#social{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    height: 30vh;
-    background-color: white;
-    background-attachment: fixed;
-    position: relative;
+    background-color: #438496;
     z-index: 1;
-}
-
-#social img{
-    transition: all 100ms ease;
-    -webkit-transition: all 100ms ease;
-    -moz-transition: all 100ms ease;
-    -o-transition: all 100ms ease;
-    -ms-transition: all 100ms ease;
-    width: 8vw;
-    height: 8vh;
-    margin: 0.5em -0.5em 0.5em -0.5em;
-    filter: gray;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-}
-
-#social img:hover{
-    filter: none;
-    filter: opacity(0.6);
-    -webkit-filter: grayscale(0);
-    cursor: hand;
-}
-
-#social a{
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-    color: black;
-}
-
-#social a:hover{
-    color: #3b5998;
-}
-
-#bottom-bottom{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 70%;
-    background: url("../img/sample/bakery-dark.jpg") no-repeat center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
-}
-
-#bottom-bottom p{
-    color: white;
-}
-
-#copy{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.3em;
-    font-weight: 300;
 }
 
-#footerlogo{
+#footerWrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 80vw;
+}
+
+#footerWrapper div{
+    margin: 0 4vw;
+}
+
+#footerlogo {
     font-size: 2em;
     font-weight: 700;
 }
 
-.contactFormHidden{
-    display: none;
+.socialLinks{
+    margin: 0vh 0vw 3vh 0vw !important;
 }
 
-.contactForm{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: white;
+.socialLinks img{
+    width: 2vw;
 }
 
-.contact{
-    margin: 5vh 0vw 5vh 0vw;
+#footerNav ul li{
+    margin: 0vh 0vw 2vh 0vw;
 }
-
-.contact input{
-    display: flex;
-    margin: 1em 0em 1em 0em;
-    padding: 1em 1em 1em 1em;
-    width: 35vw;
-    height: 8vh;
-    box-shadow: inset 0px 0px 3px #000;
-    -moz-box-shadow: inset 0px 0px 3px #000;
-    -webkit-box-shadow: inset 0px 0px 3px #000;
-    background: white;
-    border: none;
-    font-size: 0.9em;
-}
-
-.contact textarea{
-    display: flex;
-    margin: 1em 0em 1em 0em;
-    padding: 1em 1em 1em 1em;
-    width: 35vw;
-    height: 18vh;
-    box-shadow: inset 0px 0px 3px #000;
-    -moz-box-shadow: inset 0px 0px 3px #000;
-    -webkit-box-shadow: inset 0px 0px 3px #000;
-    background: white;
-    border: none;
-    font-size: 0.9em;
-}
-
-.contact button{
-    display: flex;
-    margin: 1em 0em 1em 0em;
-    padding: 1vh 2.5vw;
-    width: 8vw;
-    height: 5vh;
-    box-shadow: inset 0px 0px 3px #000;
-    -moz-box-shadow: inset 0px 0px 3px #000;
-    -webkit-box-shadow: inset 0px 0px 3px #000;
-    background: white;
-    border: none;
-    font-size: 0.9em;
-}
-
-label{
-    color: #3b5998;
-}
-
-.formSide{
-    font-size: 1.5em;
-    height: 100%;
-}
-
-.formSide p{
-    color: #3b5998;
-}
-
