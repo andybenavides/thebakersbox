@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"github.com/julienschmidt/httprouter"
 	"io/ioutil"
-//	"log"
+	//"log"
 )
 
 var tpl *template.Template
@@ -25,16 +25,14 @@ func init() {
 
 func homePage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
-	files, _ := ioutil.ReadDir("assets/img/gallery/")
-//	if err != nil {
-//		log.Fatal(err)
-//	}
+	files, _ := ioutil.ReadDir("assets/img/galleria")
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
 
-	imgNames := make([]string, 8)
+	imgNames := make([]string, 9)
 	for i, file := range files {
-		if (file.Name() != ".DS_Store") {
-			imgNames[i-1] = file.Name()
-		}
+		imgNames[i] = file.Name()
 	}
 
 	tpl.ExecuteTemplate(w, "main.html", imgNames)
@@ -44,6 +42,6 @@ func galleryPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	tpl.ExecuteTemplate(w, "gallery.html", nil)
 }
 
-func pricingPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params){
+func pricingPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	tpl.ExecuteTemplate(w, "pricing.html", nil)
 }

@@ -19,11 +19,25 @@ func sendEmail(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 		c := appengine.NewContext(r)
 
 		addr := r.FormValue("email")
+		firstName := r.FormValue("firstName")
+		lastName := r.FormValue("lastName")
+		message := r.FormValue("message")
+
+		msgToBB := &mail.Message{
+			Sender:  "The Bakers Box Cafe <andybenavides.22@bakers-box.appspotmail.com>",
+			ReplyTo: addr,
+			To: []string{"andybenavides.22@gmail.com"},
+			Subject: "New Inquiry from: " + firstName + " " + lastName + "!",
+			HTMLBody: message,
+		}
+		if err := mail.Send(c, msgToBB); err != nil {
+			log.Errorf(c, "Message failed to send: %v", err)
+		}
 
 		msg := &mail.Message{
 			Sender:  "The Bakers Box Cafe <andybenavides.22@bakers-box.appspotmail.com>",
 			To:      []string{addr},
-			Subject: "See you tonight",
+			Subject: "Thank you for contacting me!",
 			HTMLBody:    confirmMessage,
 		}
 		if err := mail.Send(c, msg); err != nil {
@@ -36,10 +50,10 @@ func sendEmail(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 }
 
 const confirmMessage = `
-<html><body style="background-image: url(assets/img/gallery/flowerCookies.png);">
+<html><body>
 <h1>
-Thank you for creating an account!
+Thank you for contacting me!
 </h1>
-Please confirm your email address by clicking on the link below:
+I will get back to you soon.
 </body></html>
 `

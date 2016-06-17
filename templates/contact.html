@@ -1,18 +1,31 @@
 {{ template "header"}}
 
-<div class="contactPage">
-	<form action="/sendEmail" method="POST">
-		<fieldset>
-			<input id="firstName" placeholder="First Name" type="text">
-			<input id="LastName" placeholder="Last Name" type="text">
+<div class="contactPage parallax">
+	<h1>CONTACT</h1>
+	<div class="contact-page-container">
+		<div id="contact-info">
+			<h2>INFO</h2>
+			<p>Please expect 3-7 days for a response</p>
+			<p>2 week notice for orders</p>
+			<p>There are restrictions on what I can make</p><span id="learn-more">LEARN MORE</span>
+		</div>
+		<form action="/sendEmail" method="POST">
+			<fieldset>
+				<input id="firstName" name="firstName" placeholder="First Name" type="text">
+				<input id="lastName" name="lastName" placeholder="Last Name" type="text">
+			</fieldset>
 			<input id="email" name="email" placeholder="Email Address" type="email">
-		</fieldset>
-		<fieldset>
-			<input id="subject" placeholder="Subject" type="text">
-			<textarea id="message" placeholder="Message"></textarea>
-		</fieldset>
-		<button id="submit" type="submit">send</button>
-	</form>
+			<textarea id="message" name="message" placeholder="Message"></textarea>
+			<button id="submit" type="submit" disabled="disabled">SEND</button>
+		</form>
+		<div id="contact-modal">
+			<p>Currently, I am unable to sell:</p>
+			<ul>
+				<li>Cakes</li>
+				<li>other...</li>
+			</ul>
+		</div>
+	</div>
 </div>
 
 {{ template "footer"}}

@@ -2,7 +2,7 @@ header {
     width: 92vw;
     height: 10vh;
     position: absolute;
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255, 255, 255, 0);
     transition: all 150ms ease;
     -webkit-transition: all 150ms ease;
     -moz-transition: all 150ms ease;
@@ -14,6 +14,11 @@ header ul {
     display: flex;
     align-items: center;
     height: 100%;
+}
+
+header ul span li{
+    padding: 1vh 0;
+    margin: 0em 3vw 0em 3vw;
 }
 
 header ul span li a {
@@ -29,14 +34,13 @@ header ul span li a:hover {
 }
 
 header ul .MenuLink {
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    margin: 0em 2vw 0em 2vw;
-    font-family: "Lato", sans-serif;
+    padding: 1vh 0;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 1.3em;
 }
 
-#nav-links-pull-right{
+#nav-links-pull-right {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -45,7 +49,7 @@ header ul .MenuLink {
 
 #logo {
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 4em;
     float: left !important;
 }
 

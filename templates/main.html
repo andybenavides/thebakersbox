@@ -3,13 +3,13 @@
 	<div class="mainWrapper parallax">
 		<div id="mainTag">
 			<h1 id="mainHeader">
-				<div>the</div>
-				BAKERS BOX
-				<div>cafe</div>
+				<span>the</span>
+				BAKERS<br/> BOX
+				<span>cafe</span>
 			</h1>
 		</div>
 	</div>
-	<div id="about">
+	<div id="about" class="hide-me">
 		<div id="bio"><span>California dreamin' of cakes and cookies
 			</span><br/><br/>
 			My name is Ariel. I started my business in February of 2014 and have quit my day job since.
@@ -28,7 +28,7 @@
 	<div class="smallGallery">
 		{{ range . }}
 		<div class="galleryItem">
-			<img src="../assets/img/gallery/{{.}}">
+			<img src="../assets/img/galleria/{{ . }}">
 		</div>
 		{{ end }}
 	</div>
