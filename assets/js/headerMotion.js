@@ -39,16 +39,27 @@ $(document).ready(function () {
             $(this).addClass("active");
         }
     });
+    //
+    // $(".hide-me").each(function(i){
+    //    $(this).delay(i * 800).fadeIn(1000);
+    // });
 
     $(window).scroll(function () {
 
         /* Check the location of each desired element */
         $('.hide-me').each(function (i) {
-
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if (bottom_of_window > bottom_of_object) {
-                $(this).animate({'opacity': '1'}, 750);
+            if (bottom_of_window > object) {
+                $(this).fadeIn();
+            }
+        });
+
+        $('.galleryItem').each(function (i) {
+            var object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > (object+1500)) {
+                $(this).delay(i * 50).animate({top: '0px', opacity: 1},150);
             }
         });
     });
@@ -122,10 +133,10 @@ $(document).ready(function () {
         if ($(this).val().length < 10 && !messageErr) {
             $('.messageErr').remove();
             $("textarea").before("<p class=\"messageErr err\">You gotta send me something!</p>");
-            $('.messageErr').animate({opacity: 1, top:'10px'}, 150);
+            $('.messageErr').animate({opacity: 1, top: '10px'}, 150);
             messageErr = true;
         } else if ($(this).val().length > 10) {
-            $(".messageErr").animate({opacity:0, top:'-10px'}, 150);
+            $(".messageErr").animate({opacity: 0, top: '-10px'}, 150);
             messageErr = false;
             messageVal = true;
         }
@@ -133,13 +144,28 @@ $(document).ready(function () {
 
     // Check for valid inputs before enabling send button
     $('form').keyup(function () {
-        if (fnLenVal && fnNumVal && messageVal && emailVal && lnLenVal && lnNumVal)
+        if (!fnLenErr && !fnNumErr && !messageErr && !emailErr && !lnLenErr && !lnNumErr && ($('#message').val().length > 0))
             $('button').prop('disabled', false);
+        else
+            $('button').prop('disabled', true);
     });
 
-    $('#learn-more').click(function(){
-       $('#contact-modal').toggleClass('notHidden', 1400, 'swing');
+    var modal = $('.modal-wrapper');
+    var button = $('#learn-more');
+    var close = $('.close');
+
+    button.click(function(){
+       modal.show(100);
     });
+    close.click(function(){
+        modal.hide(100);
+    });
+
+    $(window).click(function(event){
+        if(event.target == modal){
+            modal.hide();
+        }
+    })
 
 });
 

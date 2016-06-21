@@ -25,14 +25,16 @@ func init() {
 
 func homePage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
-	files, _ := ioutil.ReadDir("assets/img/galleria")
+	files, _ := ioutil.ReadDir("assets/img/galleria/")
 	//if err != nil {
 	//	log.Fatal(err)
 	//}
 
-	imgNames := make([]string, 9)
+	imgNames := make([]string, 8)
 	for i, file := range files {
-		imgNames[i] = file.Name()
+		if (file.Name() != ".DS_Store") {
+			imgNames[i-1] = file.Name()
+		}
 	}
 
 	tpl.ExecuteTemplate(w, "main.html", imgNames)

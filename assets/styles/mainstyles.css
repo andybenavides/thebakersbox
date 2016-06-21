@@ -155,7 +155,6 @@ table {
     flex-direction: row;
     background-color: white;
     line-height: 2;
-    opacity: 0;
 }
 
 #about * {
@@ -169,6 +168,10 @@ table {
     font-family: 'Lora', serif;
 }
 
+.hide-me{
+    display: none;
+}
+
 #bio {
     max-width: 40vw;
     color: black;
@@ -176,7 +179,7 @@ table {
 }
 
 #contactButton {
-    display: flex;
+    /*display: flex;*/
     flex-direction: column;
     max-width: 40vw;
     text-align: center;
@@ -191,6 +194,7 @@ table {
     -ms-transition: all 150ms ease-in-out;
     -o-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
+    border-radius: 3px;
 }
 
 #contactButton div a:hover {
@@ -228,7 +232,12 @@ table {
 
 .galleryItem {
     overflow: hidden;
-
+    position: relative;
+    opacity: 0;
+    top: 50px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
 .smallGallery div img {
@@ -324,7 +333,7 @@ table {
 }
 
 #pricingHeader h1:first-child {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -339,14 +348,14 @@ table {
 #pricingButtons button {
     width: 12vw;
     height: 8vh;
-    font-size: 1.2em;
-    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+    font-family: "Lora", serif;
     font-weight: 100;
-    color: white;
+    /*color: white;*/
     cursor: hand;
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 1);
-    border: 1px solid gray;
+    background-color: whitesmoke;
+    border: none;
     float: left;
 }
 
@@ -365,12 +374,13 @@ table {
 }
 
 #pricingButtons button:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .clickedButton {
-    background-color: rgba(40, 109, 168, 0.6) !important;
-    border: 1px solid #286da8 !important;
+    background-color: rgba(67, 132, 150, 1) !important;
+    border: none !important;
+    color: white;
 }
 
 .pricingSection {
@@ -427,6 +437,12 @@ table {
 
 .pricingSection img {
     max-width: 20vw;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 3em black;
+    -moz-box-shadow: 0 0 3em  black;
+    box-shadow: 0 0 1em black;
 }
 
 .notHidden {

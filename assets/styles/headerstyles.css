@@ -38,6 +38,7 @@ header ul .MenuLink {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 1.3em;
+    position: relative;
 }
 
 #nav-links-pull-right {
