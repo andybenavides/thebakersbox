@@ -18,21 +18,25 @@
 			I look forward to opening my door to greet you with your order soon.
 		</div>
 		<div id="contactButton" class="hide-me">
-			<span>Have a question? <br/>Ready to order? <br/><span id="letsTalk">Let's talk.</span></span>
+			<span>Have a question? <br/>Ready to order? <br/></span><span id="letsTalk">Let's talk.</span>
 
 			<div>
-				<a href="#">CONTACT</a>
+				<a href="/contact">CONTACT</a>
 			</div>
 		</div>
 	</div>
-	<div class="smallGallery">
-		{{ range . }}
-		<div class="galleryItem">
-			<img src="../assets/img/galleria/{{ . }}">
+	<div id="smallGalleryContainer">
+		<h1 id="gallery-heading">Gallery</h1>
+		<div class="smallGallery">
+			{{ range . }}
+			<div class="galleryItem">
+				<img src="{{ .Url }}" alt="{{ .Title }}">
+			</div>
+			{{ end }}
 		</div>
-		{{ end }}
+		<div id="see-more-btn"><a href="/gallery">SEE MORE</a></div>
 	</div>
-	<div class="smallGallery social">
+	<div class="social">
 		<div class="flexed">
 			<a href="https://www.instagram.com/thebakersboxcafe/"><img src="../assets/img/icons/insta.png"></a>
 

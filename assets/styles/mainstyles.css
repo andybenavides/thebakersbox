@@ -57,7 +57,7 @@ table {
 }
 
 .mainWrapper {
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -154,21 +154,21 @@ table {
     justify-content: center;
     flex-direction: row;
     background-color: white;
-    line-height: 2;
+    line-height: 1.25;
 }
 
 #about * {
-    margin: 2vh 4vw;
+    margin: 7vh 4vw;
 }
 
 #about span {
     margin: 0 auto;
-    color: #cd5360;
-    font-size: 1.7rem;
+    color: #66AB8C;
+    font-size: 2.5rem;
     font-family: 'Lora', serif;
 }
 
-.hide-me{
+.hide-me {
     display: none;
 }
 
@@ -176,6 +176,7 @@ table {
     max-width: 40vw;
     color: black;
     font-weight: 300;
+    font-size: 1.25rem;
 }
 
 #contactButton {
@@ -185,9 +186,14 @@ table {
     text-align: center;
 }
 
+#contactButton:first-child{
+    padding: 10vh !important;
+}
+
 #contactButton div a {
-    padding: 1vh 2vw;
-    font-size: 0.8rem;
+    padding: 2vh 3vw;
+    margin: 1vh 0vw;
+    font-size: 1rem;
     background-color: #286da8;
     -webkit-transition: all 150ms ease-in-out;
     -moz-transition: all 150ms ease-in-out;
@@ -212,7 +218,8 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100vw;
+    max-width: 80vw;
+    margin: auto;
     flex-direction: row;
     -webkit-flex-flow: row wrap;
     display: -webkit-box;
@@ -235,6 +242,7 @@ table {
     position: relative;
     opacity: 0;
     top: 50px;
+    margin: 0.5vh;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -250,12 +258,48 @@ table {
     transition: all 350ms ease-in;
 }
 
+#smallGalleryContainer {
+    background: #6EC4DB;
+}
+
 .galleryItem:hover img {
     -webkit-transform: translateY(-10vh);
     -moz-transform: translateY(-10vh);
     -ms-transform: translateY(-10vh);
     -o-transform: translateY(-10vh);
     transform: translateY(-10vh);
+}
+
+#gallery-heading {
+    text-align: center;
+    width: 100vw;
+    color: #286da8;
+    font-size: 3rem;
+    padding: 7vh 0vw;
+    font-family: "Oswald";
+}
+
+#see-more-btn {
+    text-align: center;
+    padding: 10vh 0vw;
+    font-size: 1.25rem;
+}
+
+#see-more-btn a {
+    background-color: #286da8;
+    padding: 3vh 4vw;
+    border-radius: 3px;
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
+    -o-transition: all 250ms;
+    transition: all 250ms;
+}
+
+#see-more-btn a:hover {
+    background-color: gainsboro;
+    border: 2px solid #286da8;
+    color: #286da8;
 }
 
 .imageButton {
@@ -271,8 +315,8 @@ table {
 
 .social {
     background: url("../img/easterCookiesDark.jpg") center no-repeat;
-    -webkit-background-size:cover;
-    background-size:cover;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-color: white;
     height: 60vh;
     display: flex;
@@ -303,7 +347,7 @@ table {
 }
 
 .active {
-    color: #438496;
+    color: #FA7C92;
 }
 
 /*************** STYLES FOR PRICING PAGE ***************/
@@ -441,7 +485,7 @@ table {
     -moz-border-radius: 3px;
     border-radius: 3px;
     -webkit-box-shadow: 0 0 3em black;
-    -moz-box-shadow: 0 0 3em  black;
+    -moz-box-shadow: 0 0 3em black;
     box-shadow: 0 0 1em black;
 }
 

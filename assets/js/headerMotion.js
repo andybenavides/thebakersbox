@@ -39,10 +39,6 @@ $(document).ready(function () {
             $(this).addClass("active");
         }
     });
-    //
-    // $(".hide-me").each(function(i){
-    //    $(this).delay(i * 800).fadeIn(1000);
-    // });
 
     $(window).scroll(function () {
 
@@ -58,8 +54,8 @@ $(document).ready(function () {
         $('.galleryItem').each(function (i) {
             var object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if (bottom_of_window > (object+1500)) {
-                $(this).delay(i * 50).animate({top: '0px', opacity: 1},150);
+            if (bottom_of_window > (object+1700)) {
+                $(this).delay(i * 200).animate({top: '0px', opacity: 1},600);
             }
         });
     });

@@ -4,9 +4,17 @@ import (
 	"html/template"
 	"net/http"
 	"github.com/julienschmidt/httprouter"
+	//"io/ioutil"
+	//"os"
+	"encoding/json"
+	"fmt"
 	"io/ioutil"
-	//"log"
 )
+
+type Image struct {
+	Url string `json:"Url"`
+	Title string `json:"Title"`
+}
 
 var tpl *template.Template
 
@@ -23,21 +31,30 @@ func init() {
 	tpl = template.Must(template.ParseGlob("templates/*.html"))
 }
 
+const jsonFile = "./images.json"
+
 func homePage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
-	files, _ := ioutil.ReadDir("assets/img/galleria/")
+	// Stat file for writing permissions after write
+	//fi, err := os.Stat(jsonFile)
 	//if err != nil {
-	//	log.Fatal(err)
+	//	http.Error(w, fmt.Sprintf("Unable to stat data file (%s): %s", jsonFile, err), http.StatusInternalServerError)
+	//	return
 	//}
 
-	imgNames := make([]string, 8)
-	for i, file := range files {
-		if (file.Name() != ".DS_Store") {
-			imgNames[i-1] = file.Name()
-		}
+	jsonData, error := ioutil.ReadFile(jsonFile)
+	if error != nil {
+		http.Error(w, fmt.Sprintf("Unable to read the data file (%s): %s", jsonFile, error), http.StatusInternalServerError)
+		return
 	}
 
-	tpl.ExecuteTemplate(w, "main.html", imgNames)
+	var images []Image
+	err := json.Unmarshal(jsonData, &images)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+
+	tpl.ExecuteTemplate(w, "main.html", images)
 }
 
 func galleryPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
