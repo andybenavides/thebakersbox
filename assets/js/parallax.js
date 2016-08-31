@@ -4,7 +4,7 @@
 
 (function () {
 
-    var parallax = document.querySelectorAll(".parallax"), speed = 0.25;
+    var parallax = document.querySelectorAll(".parallax"), speed = 0.05;
 
     window.onscroll = function () {
 

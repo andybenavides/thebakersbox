@@ -3,82 +3,48 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
-    background: url("../../assets/img/TheBakersBoxCookieDark2.jpg") no-repeat top center;
-    background-size: cover;
+    background-color: #a9b7c0;
 }
 
 .contact-page-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    width: 100vw;
-    height: 60vh;
-}
-
-#contact-info {
-    max-width: 20vw;
-    height: 100%;
-    padding: 1vh 5vw;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     flex-direction: column;
+    width: 100vw;
+    padding-top: 15vh;
 }
 
-#contact-info p {
-    margin: 3vh auto;
-    font-size: 1.5rem;
-    color: white;
-    width: 100%;
-}
-
-#contact-info > h2 {
-    font-size: 2.3rem;
-    font-family: 'Oswald', sans-serif;
-}
-
-.contactPage > h1 {
+.contactPage h1 {
     font-size: 3rem;
-    margin: 5vh 0;
-    font-family: 'Oswald', sans-serif;
+    margin: 5vh auto;
+}
+
+.contactPage p {
+    width: 50vw;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 1.1rem;
 }
 
 form {
-    width: 50vw;
+    margin: 5vh auto !important;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
 }
 
-form fieldset {
-    width: 100%;
-}
-
-form fieldset input {
-    width: 49.7%;
-    border: none;
-    height: 5vh;
-    margin: 2vh 0vw;
-    font-family: "Lora", sans-serif;
-    font-size: 1.8rem;
-    padding: 0 1vw;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+form fieldset{
+    display: flex;
+    flex-direction: row;
 }
 
 form input {
     width: 100%;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
     height: 5vh;
     border: none;
-    margin: 2vh 0vw;
-    font-family: "Lora", sans-serif;
-    font-size: 1.8rem;
+    margin: 0vh 0vw 3vh 0vw;
+    font-size: 1rem;
     padding: 0 1vw;
 }
 
@@ -88,16 +54,11 @@ form input {
 
 form textarea {
     width: 100%;
-    height: 20vh;
+    height: 15vh;
     resize: none;
-    margin: 2vh 0;
-    font-family: "Lora", sans-serif;
-    font-size: 1.8rem;
-    padding: 0 1vw;
+    font-size: 1rem;
+    padding: 1vh 1vw;
     border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
 }
 
 form button {
@@ -106,7 +67,6 @@ form button {
     width: 10vw;
     background-color: white;
     border: none;
-    font-family: "Lora", sans-serif;
     font-size: 1rem;
 
     -webkit-transition: all 250ms ease;
@@ -118,9 +78,6 @@ form button {
     background: linear-gradient(to right, #438496 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
 }
 
 form button:hover {
@@ -147,7 +104,18 @@ button[disabled]:hover {
 }
 
 form input:focus, form textarea:focus {
-    background-color: #438496;
+    border: 1px solid gray;
+}
+
+select{
+    width: 50%;
+    height: 5vh;
+    border: none;
+    margin: 0vh 0vw 3vh 0vw;
+    font-size: 1rem;
+    padding: 0 1vw;
+    border-radius: 0px;
+    -webkit-appearance: none;
 }
 
 .LNnumErr, .LNlenErr {
@@ -159,77 +127,4 @@ form input:focus, form textarea:focus {
     text-transform: uppercase;
     color: red;
     opacity: 0;
-    font-family: 'Oswald', sans-serif;
-}
-
-#learn-more {
-    color: #438496;
-}
-
-#learn-more:hover {
-    cursor: hand;
-    color: white;
-}
-
-#contact-modal {
-    background: white;
-    width: 50vw;
-    height: 60vh;
-    margin: 5vh auto;
-    text-align: center;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.modal-wrapper {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#contact-modal * {
-    color: black;
-    font-size: 2rem;
-}
-
-.close {
-    color: #aaa !important;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    padding: 2vh 2vw;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-}
-
-.modal-content {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
-}
-
-.close:hover,
-.close:focus {
-    color: black !important;
-    text-decoration: none;
-    cursor: pointer;
 }

@@ -1,5 +1,18 @@
 {{template "header"}}
 
-<div id="instafeed"></div>
+<div id="bigGalleryContainer">
+    <div>
+        <div id="galleryHeading"><a href="/gallery">View the Gallery</a></div>
+    </div>
+    <div class="bigGallery">
+        {{ range . }}
+        <div class="bigGalleryItem">
+            <img src="{{ .Url }}" alt="{{ .Title }}">
+            <span class="infoPane">test</span>
+        </div>
+        {{ end }}
+    </div>
+    <div id="instaLink"><a href="#">See more on Instagram</a></div>
+</div>
 
 {{template "footer"}}

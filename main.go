@@ -4,8 +4,6 @@ import (
 	"html/template"
 	"net/http"
 	"github.com/julienschmidt/httprouter"
-	//"io/ioutil"
-	//"os"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -58,7 +56,20 @@ func homePage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 }
 
 func galleryPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	tpl.ExecuteTemplate(w, "gallery.html", nil)
+    
+    jsonData, error := ioutil.ReadFile(jsonFile)
+    if error != nil{
+        http.Error(w, fmt.Sprintf("Unable to read the data file (%s): %s", jsonFile, error), http.StatusInternalServerError)
+        return
+    }
+    
+    var images []Image
+    err := json.Unmarshal(jsonData, &images)
+    if err != nil {
+        fmt.Println("error:", err)
+    }
+    
+	tpl.ExecuteTemplate(w, "gallery.html", images)
 }
 
 func pricingPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {

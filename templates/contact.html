@@ -1,36 +1,38 @@
 {{ template "header"}}
 
 <div class="contactPage parallax">
-	<h1>CONTACT</h1>
-	<div class="contact-page-container">
-		<div id="contact-info">
-			<h2>INFO</h2>
-			<p>Please expect 3-7 days for a response</p>
-			<p>2 week notice for orders</p>
-			<p>There are restrictions on what I can make</p><span id="learn-more">LEARN MORE</span>
-		</div>
-		<form action="/sendEmail" method="POST">
-			<fieldset>
-				<input id="firstName" name="firstName" placeholder="First Name" type="text">
-				<input id="lastName" name="lastName" placeholder="Last Name" type="text">
-			</fieldset>
-			<input id="email" name="email" placeholder="Email Address" type="email">
-			<textarea id="message" name="message" placeholder="Message"></textarea>
-			<button id="submit" type="submit" disabled="disabled">SEND</button>
-		</form>
-		<div class="modal-wrapper">
-			<div id="contact-modal">
-				<span class="close">x</span>
-				<div class="modal-content">
-					<p>Currently, I am unable to sell:</p>
-					<ul>
-						<li>Cakes</li>
-						<li>other...</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="contact-page-container">
+        <h1>Let's Talk</h1>
+        <p>This is some test text. You can write anything you'd like here. Maybe even information about the process of ordering from this site.</p>
+        <form action="/sendEmail" method="POST">
+            <fieldset>
+                <h3>First Name</h3>
+                <input id="firstName" name="firstName" type="text" autofocus>
+                <h3>Last Name</h3>
+                <input id="lastName" name="lastName" type="text">
+                <h3>e-mail address</h3>
+                <input id="email" name="email" type="email">
+            </fieldset>
+            <fieldset>
+                <div>
+                    <h3>Pickup Date</h3>
+                    <input id="pickupDate" name="pickupDate" type="date" placeholder="mm/dd">
+                </div>
+                <div>
+                    <h3>Order</h3>
+                    <select required name="orderType">
+                        <option value="cookie">Cookies</option>
+                        <option value="bread">bread</option>
+                        <option value="rolls">rolls</option>
+                        <option value="cupcake">cupcake</option>
+                    </select>
+                </div>
+            </fieldset>
+            <h3>Messsage</h3>
+            <textarea id="message" name="message"></textarea>
+            <button id="submit" type="submit" disabled="disabled">SEND</button>
+        </form>
+    </div>
 </div>
 
 {{ template "footer"}}

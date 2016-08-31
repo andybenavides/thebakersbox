@@ -22,13 +22,15 @@ func sendEmail(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 		firstName := r.FormValue("firstName")
 		lastName := r.FormValue("lastName")
 		message := r.FormValue("message")
+        pickupDate := r.FormValue("pickupDate")
+        orderType := r.FormValue("orderType")
 
 		msgToBB := &mail.Message{
 			Sender:  "The Bakers Box Cafe <andybenavides.22@bakers-box.appspotmail.com>",
 			ReplyTo: addr,
 			To: []string{"andybenavides.22@gmail.com"},
 			Subject: "New Inquiry from: " + firstName + " " + lastName + "!",
-			HTMLBody: message,
+            HTMLBody: message + "order by date: " + pickupDate + "\norder type: " + orderType,
 		}
 		if err := mail.Send(c, msgToBB); err != nil {
 			log.Errorf(c, "Message failed to send: %v", err)

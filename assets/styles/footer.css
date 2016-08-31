@@ -2,14 +2,15 @@ footer {
     height: 30vh;
     width: 100vw;
     font-size: 0.8em;
-    background-color: #438496;
+    background-color: white;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Karla', sans-serif;
 }
 
-#footerWrapper{
+#footerWrapper {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -17,7 +18,11 @@ footer {
     max-width: 80vw;
 }
 
-#footerWrapper div{
+#footerWrapper * {
+    color: #30415d;
+}
+
+#footerWrapper div {
     margin: 0 4vw;
 }
 
@@ -26,14 +31,18 @@ footer {
     font-weight: 700;
 }
 
-.socialLinks{
+.socialLinks {
     margin: 0vh 0vw 3vh 0vw !important;
 }
 
-.socialLinks img{
+.socialLinks img {
     width: 2vw;
 }
 
-#footerNav ul li{
+#footerNav ul li {
     margin: 0vh 0vw 2vh 0vw;
+}
+
+#footerNav ul li a:hover {
+    color: #d5d5d5;
 }
