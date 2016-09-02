@@ -10,8 +10,10 @@ import (
 )
 
 type Image struct {
+    id int `json:"id"`
 	Url string `json:"Url"`
 	Title string `json:"Title"`
+    Price string `json:"Price"`
 }
 
 var tpl *template.Template
@@ -52,7 +54,7 @@ func homePage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 		fmt.Println("error:", err)
 	}
 
-	tpl.ExecuteTemplate(w, "main.html", images)
+    tpl.ExecuteTemplate(w, "main.html", images[0:6])
 }
 
 func galleryPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
@@ -69,7 +71,10 @@ func galleryPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
         fmt.Println("error:", err)
     }
     
-	tpl.ExecuteTemplate(w, "gallery.html", images)
+    // Make display functionality flexible
+    n := len(images)
+    
+    tpl.ExecuteTemplate(w, "gallery.html", images[0:n])
 }
 
 func pricingPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {

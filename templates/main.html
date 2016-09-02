@@ -1,46 +1,48 @@
 {{template "header"}}
 <div class="site-wrap">
-	<div class="mainWrapper parallax">
-		<div id="mainTag">
-			<h1 id="mainHeader">
+    <div class="mainWrapper parallax">
+        <div id="mainTag">
+            <h1 id="mainHeader">
 				<p>The<br/>Bakers<br/>Box<br/>Cafe</p>
 			</h1>
-		</div>
-	</div>
-	<div id="about">
-		<div id="bio"><span id="bioTitle">California Dreamin'<br/> of Cakes <br/>and Cookies
+        </div>
+    </div>
+    <div id="about">
+        <div id="bio"><span id="bioTitle" class="fade-in-scroll">California Dreamin'<br/> of Cakes <br/>and Cookies
 			</span>
-			<span id="bioBody">
+            <span id="bioBody" class="fade-in-scroll">
 				My name is Ariel.<br/> I started my business in February of 2014 and have quit my day job since.
 				I do this full time and for the most part, it's just little ol' me.<br/><br/>
 				I answer all emails, bake, decorate, and package all the treats that go out of my family's home.
 				I look forward to opening my door to greet you with your order soon.
 			</span>
-		</div>
-        <a id="contact-me-button" href="/contact"><img src="" />Contact Me  <img id="mail-icon" class="svg env-icon" src="../assets/img/icons/envelope.svg"/></a>
-	</div>
-	<div id="smallGalleryContainer">
-		<div id="galleryHeading">
-			<div id="see-more-btn"><a href="/gallery">View the Gallery</a></div>
-		</div>
-		<div class="smallGallery">
-			{{ range . }}
-			<div class="galleryItem">
-				<img src="{{ .Url }}" alt="{{ .Title }}">
-			</div>
-			{{ end }}
-		</div>
+        </div>
+        <div class="fade-in-scroll">
+            <a id="contact-me-button" href="/contact">Contact Me  <img id="mail-icon" class="svg env-icon" src="../assets/img/icons/envelope.svg"/></a>
+        </div>
+    </div>
+    <div id="smallGalleryContainer">
+        <div id="galleryHeading">
+            <div id="see-more-btn"><a href="/gallery">View the Gallery</a></div>
+        </div>
+        <div class="smallGallery">
+            {{ range . }}
+            <div class="galleryItem">
+                <img src="{{ .Url }}" alt="{{ .Title }}">
+            </div>
+            {{ end }}
+        </div>
         <div id="instaLink"><a href="#">See more on Instagram</a></div>
-	</div>
-	<div class="social parallax"></div>
-	<div class="action-banner">
-		<div id="action-banner-one">
-			<h1>Have a question?<br/>Ready to order?</h1>
-			<span>Don't be shy...</span>
-		</div>
-		<div id="action-banner-two">
-			<a href="/contact">Contact Me<img id="mail-icon" class="svg env-icon" src="../assets/img/icons/next-1.svg"/></a>
-		</div>
-	</div>
-	{{template "footer"}}
+    </div>
+    <div class="social parallax"></div>
+    <div class="action-banner">
+        <div id="action-banner-one" class="fade-in-scroll">
+            <h1>Have a question?<br/>Ready to order?</h1>
+            <span>Don't be shy...</span>
+        </div>
+        <div id="action-banner-two" class="fade-in-scroll">
+            <a href="/contact">Contact Me<img id="mail-icon" class="svg env-icon" src="../assets/img/icons/next-1.svg"/></a>
+        </div>
+    </div>
+    {{template "footer"}}
 </div>

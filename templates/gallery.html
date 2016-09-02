@@ -1,14 +1,18 @@
 {{template "header"}}
 
 <div id="bigGalleryContainer">
-    <div>
-        <div id="galleryHeading"><a href="/gallery">View the Gallery</a></div>
+    <div id="galleryHeading">
+        <h1 class="bigGalleryHeader">You've reached the gallery</h1>
+        <p class="bigGalleryHeader">This is test text. You can of course add important information about whatever. You could also include information about the different items offered. Ideally you would have something cool here that helps customers navigate the site or at least something cool and maybe even a little funny.</p>
     </div>
     <div class="bigGallery">
         {{ range . }}
         <div class="bigGalleryItem">
             <img src="{{ .Url }}" alt="{{ .Title }}">
-            <span class="infoPane">test</span>
+            <span class="infoPane">
+                <h1>{{ .Title }}</h1>
+                <p>{{ .Price }}</p>
+            </span>
         </div>
         {{ end }}
     </div>

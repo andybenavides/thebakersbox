@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #a9b7c0;
+    background-color: #675682;
 }
 
 .contact-page-container {
@@ -12,7 +12,10 @@
     justify-content: center;
     flex-direction: column;
     width: 100vw;
-    padding-top: 15vh;
+}
+
+em {
+    font-style: italic !important;
 }
 
 .contactPage h1 {
@@ -34,7 +37,7 @@ form {
     width: 40vw;
 }
 
-form fieldset{
+form fieldset {
     display: flex;
     flex-direction: row;
 }
@@ -43,9 +46,29 @@ form input {
     width: 100%;
     height: 5vh;
     border: none;
-    margin: 0vh 0vw 3vh 0vw;
+    margin: 0vh 0vw 2vh 0vw;
     font-size: 1rem;
     padding: 0 1vw;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+:-moz-placeholder {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+::-moz-placeholder {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+:-ms-input-placeholder {
+    font-style: italic;
+    font-size: 0.8rem;
 }
 
 #email {
@@ -68,13 +91,11 @@ form button {
     background-color: white;
     border: none;
     font-size: 1rem;
-
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
-
     background: linear-gradient(to right, #438496 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
@@ -103,11 +124,12 @@ button[disabled]:hover {
     color: black;
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
     border: 1px solid gray;
 }
 
-select{
+select {
     width: 50%;
     height: 5vh;
     border: none;
@@ -118,7 +140,14 @@ select{
     -webkit-appearance: none;
 }
 
-.LNnumErr, .LNlenErr {
+.contact-delay-item{
+    position: relative;
+    top: 50px;
+    opacity: 0;
+}
+
+.LNnumErr,
+.LNlenErr {
     float: right;
 }
 

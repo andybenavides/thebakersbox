@@ -2,9 +2,9 @@
 
 <div class="contactPage parallax">
     <div class="contact-page-container">
-        <h1>Let's Talk</h1>
-        <p>This is some test text. You can write anything you'd like here. Maybe even information about the process of ordering from this site.</p>
-        <form action="/sendEmail" method="POST">
+        <h1 class="contact-delay-item">Let's take <em>this</em> to e-mail</h1>
+        <p class="contact-delay-item">I'd love to hear from you. </br/>Shoot me an e-mail including what your sweet tooth is demanding.</p>
+        <form action="/sendEmail" method="POST" class="contact-delay-item">
             <fieldset>
                 <h3>First Name</h3>
                 <input id="firstName" name="firstName" type="text" autofocus>
@@ -28,8 +28,8 @@
                     </select>
                 </div>
             </fieldset>
-            <h3>Messsage</h3>
-            <textarea id="message" name="message"></textarea>
+            <h3>The details</h3>
+            <textarea id="message" name="message" placeholder="My 5 year old son is having a Spiderman themed birthday party next month and I would like 2 dozen Spiderman cookies!" required></textarea>
             <button id="submit" type="submit" disabled="disabled">SEND</button>
         </form>
     </div>
