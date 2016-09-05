@@ -1,7 +1,6 @@
 header {
     width: 100vw;
     height: 12vh;
-    background-color: #fff;
     transition: all 150ms ease;
     -webkit-transition: all 150ms ease;
     -moz-transition: all 150ms ease;

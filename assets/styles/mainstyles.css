@@ -184,6 +184,27 @@ table {
     color: white;
 }
 
+#mainTag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.big-red-button{
+    margin: 7vh;
+}
+
+.big-red-button a{
+    background-color: #e52a6f;
+    padding: 2vh 3vw;
+    border-radius: 3px;
+}
+
+.big-red-button a:hover{
+    opacity: 0.9;
+}
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -246,12 +267,12 @@ table {
 }
 
 #about {
-    height: 90vh;
+    padding: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #67aeca;
+    background-color: white;
     line-height: 1;
     text-align: center;
 }
@@ -259,15 +280,15 @@ table {
 #bioTitle {
     margin: 5vh auto;
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 700;
     text-align: left;
-    color: white;
+    color: #67aeca;
     font-family: 'Karla', sans-serif;
     letter-spacing: 0.05em;
 }
 
 #bioBody {
-    color: white;
+    color: black;
     display: flex;
     text-align: center;
     font-size: 1.1rem;
@@ -299,7 +320,7 @@ hr {
     padding: 0.45em 1em 0.5em;
     background-color: #67aeca;
     color: white;
-    border: 3px solid white;
+    border-radius: 3px;
     font-size: 1.5rem;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
@@ -310,13 +331,7 @@ hr {
 }
 
 #contact-me-button:hover {
-    background-color: white;
-    color: #67aeca;
-    border: 3px solid white;
-}
-
-#contact-me-button:hover svg.env-icon {
-    fill: #67aeca;
+    background-color: rgba(103, 174, 202, 0.8);
 }
 
 svg.env-icon {
@@ -372,7 +387,6 @@ svg.env-icon {
 
 #smallGalleryContainer {
     background: #f2f2f2;
-    height: 120vh;
 }
 
 .galleryItem:hover img {
@@ -413,7 +427,6 @@ svg.env-icon {
 }
 
 #see-more-btn a {
-    margin: 5vh 2vw;
     font-size: 3rem;
     color: #675682;
     -webkit-transition: all 250ms;
@@ -422,7 +435,6 @@ svg.env-icon {
     -o-transition: all 250ms;
     transition: all 250ms;
 }
-
 #see-more-btn a:hover {
     opacity: 0.8;
 }
@@ -621,7 +633,15 @@ span.infoPane * {
     position: relative;
     opacity: 0;
     top: 50px;
-    margin: 1.5vh;
+    font-size: 2rem;
+}
+
+.bigGalleryBody{
+    color: white !important;
+    font-size: 1rem !important;
+    position: relative;
+    opacity: 0;
+    top: 50px;
 }
 
 .bigGallery div {
@@ -649,16 +669,18 @@ span.infoPane * {
 }
 
 #galleryHeading {
-    padding: 5vh 3vw 5vh 3vw;
-    font-size: 2rem;
+    padding: 5vh 4vw;
+    font-size: 1.8rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 50vw;
+    max-width: 60vw;
 }
 
 #galleryHeading p {
-    font-size: 1rem;
-    margin-top: 3vh;
+    font-size: 1.25rem;
+    margin: 4vh 0;
     line-height: 2;
+    color: black;
+    font-style: italic;
 }

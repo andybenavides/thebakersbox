@@ -8,25 +8,14 @@ $(document).ready(function() {
     $(window).scroll(function() {
 
         // Check the location of each desired element
-        $('.galleryItem').each(function(i) {
+        $(".galleryItem, .fade-in-scroll").each(function(i) {
             var object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if (bottom_of_window > (object + 3200)) {
+            if (bottom_of_window > (object + 3100)) {
                 $(this).delay(i * 100).animate({
                     top: '0px',
                     opacity: 1
                 }, 500);
-            }
-        });
-
-        $('.fade-in-scroll').each(function(i) {
-            var object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if (bottom_of_window > (object + 3200)) {
-                $(this).delay(i * 100).animate({
-                    top: '0px',
-                    opacity: 1
-                }, 300);
             }
         });
     });
@@ -38,18 +27,24 @@ $(document).ready(function() {
         }, 300);
     });
 
-    $(".bigGalleryHeader").each(function(i) {
+    $(".bigGalleryHeader, .bigGalleryBody").each(function(i) {
         $(this).delay(i * 700).animate({
             top: '0px',
             opacity: 1
         }, 500);
     });
 
-    $(".contact-delay-item").each(function(i) {
-        $(this).delay(i * 500).animate({
+    $(".delay-item").each(function(i) {
+        $(this).delay(i * 250).animate({
             top: '0px',
             opacity: 1
-        }, 300);
+        }, 250);
+    });
+    
+    $(".delay-item-header").each(function(i) {
+        $(this).delay(i * 500).animate({
+            opacity: 1
+        }, 750);
     });
 
     // Form Validation

@@ -2,21 +2,21 @@
 
 <div class="contactPage parallax">
     <div class="contact-page-container">
-        <h1 class="contact-delay-item">Let's take <em>this</em> to e-mail</h1>
-        <p class="contact-delay-item">I'd love to hear from you. </br/>Shoot me an e-mail including what your sweet tooth is demanding.</p>
-        <form action="/sendEmail" method="POST" class="contact-delay-item">
+        <h1 class="delay-item">Let's take <em>this</em> to e-mail</h1>
+        <p class="delay-item-header">I'd love to hear from you. </br/>Shoot me an e-mail including what your sweet tooth is demanding.</p>
+        <form action="/sendEmail" method="POST" class="delay-item">
             <fieldset>
                 <h3>First Name</h3>
                 <input id="firstName" name="firstName" type="text" autofocus>
                 <h3>Last Name</h3>
                 <input id="lastName" name="lastName" type="text">
                 <h3>e-mail address</h3>
-                <input id="email" name="email" type="email">
+                <input id="email" name="email" type="email" required>
             </fieldset>
             <fieldset>
                 <div>
                     <h3>Pickup Date</h3>
-                    <input id="pickupDate" name="pickupDate" type="date" placeholder="mm/dd">
+                    <input id="pickupDate" name="pickupDate" type="date" placeholder="mm/dd" required>
                 </div>
                 <div>
                     <h3>Order</h3>

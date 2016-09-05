@@ -5,6 +5,7 @@
             <h1 id="mainHeader">
 				<p>The<br/>Bakers<br/>Box<br/>Cafe</p>
 			</h1>
+            <div class="big-red-button"><a href="/gallery">Shop Now</a></div>
         </div>
     </div>
     <div id="about">
@@ -23,12 +24,14 @@
     </div>
     <div id="smallGalleryContainer">
         <div id="galleryHeading">
-            <div id="see-more-btn"><a href="/gallery">View the Gallery</a></div>
+            <p class="fade-in-scroll">This is of course some test text. Perhaps it would be useful to add something about how you specialize in decorated sugar cookies for birthday parties and other events.</p>
+            <div id="see-more-btn" class="fade-in-scroll"><a href="/gallery">View the Gallery</a></div>
+
         </div>
         <div class="smallGallery">
             {{ range . }}
             <div class="galleryItem">
-                <img src="{{ .Url }}" alt="{{ .Title }}">
+                <a href="/gallery"><img src="{{ .Url }}" alt="{{ .Title }}"></a>
             </div>
             {{ end }}
         </div>
