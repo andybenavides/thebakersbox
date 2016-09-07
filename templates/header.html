@@ -1,24 +1,28 @@
 {{define "header"}}
-<html xmlns="http://www.w3.org/1999/html"></html>
-<head>
-	<title>The Bakers Box Cafe</title>
+<html xmlns="http://www.w3.org/1999/html">
 
-	<link rel="stylesheet" href="../assets/styles/headerstyles.css" type="text/css">
-	<link rel="stylesheet" href="../assets/styles/contact.css" type="text/css">
-	<link rel="stylesheet" href="../assets/styles/mainstyles.css" type="text/css">
-	<link rel="stylesheet" href="../assets/styles/footer.css" type="text/css">
+</html>
+
+<head>
+    <title>The Bakers Box Cafe</title>
+
+    <link rel="stylesheet" href="../assets/styles/headerstyles.css" type="text/css">
+    <link rel="stylesheet" href="../assets/styles/contact.css" type="text/css">
+    <link rel="stylesheet" href="../assets/styles/mainstyles.css" type="text/css">
+    <link rel="stylesheet" href="../assets/styles/footer.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-	<meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
+
 <body>
-<header class="delay-item-header">
-	<ul>
-		<span>
+    <header class="delay-item-header">
+        <ul>
+            <span>
 		<li>
 			<a href="/" class="MenuLink" id="logo">The Bakers Box Cafe</a>
 		</li>
 		</span>
-		<span id="nav-links-pull-right">
+            <span id="nav-links-pull-right">
 		<li>
 			<a href="/pricing" class="MenuLink">Pricing</a>
 		</li>
@@ -29,7 +33,7 @@
 			<a href="/gallery" class="MenuLink">Gallery</a>
 		</li>
 		</span>
-		<span>
+            <span>
 			<ul id="socialLinks">
 				<li>
 					<a href="#"><img src="../assets/img/icons/1467925875_instagram-social-media-camera-photo.svg"/></a>
@@ -39,46 +43,50 @@
 				</li>
 			</ul>
 		</span>
-	</ul>
-</header>
-{{end}}
+        </ul>
+    </header>
+    {{end}} {{define "footer"}}
+    <footer>
+        <div id="footerWrapper">
+            <div>
+                <p>Made with love and sugar.</p>
+            </div>
+            <div>
+                <p id="footerlogo">The
+                    <br>Bakers
+                    <br>Box
+                    <br>Cafe</p>
+            </div>
+            <div>
+                <div class="socialLinks">
+                    <h1>FOLLOW ME</h1>
+                    <br/>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://www.instagram.com/thebakersboxcafe/"><img src="../assets/img/icons/1467925875_instagram-social-media-camera-photo.svg"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="socialLinks">
+                    <h1>CONTACT ME</h1>
+                    <br/>
+                    <p><a href="#" mailto="#">thebakersboxcafe@gmail.com</a></p>
+                </div>
+            </div>
+            <div id="footerNav">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/pricing">PRICING</a></li>
+                    <li><a href="/gallery">GALLERY</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
-{{define "footer"}}
-<footer>
-	<div id="footerWrapper">
-		<div>
-			<p>Made with love and sugar.</p>
-		</div>
-		<div>
-			<p id="footerlogo">The<br>Bakers<br>Box<br>Cafe</p>
-		</div>
-		<div>
-			<div class="socialLinks">
-				<h1>FOLLOW ME</h1><br/>
-				<ul>
-					<li><a target="_blank" href="https://www.instagram.com/thebakersboxcafe/"><img
-							src="../assets/img/icons/1467925875_instagram-social-media-camera-photo.svg"></a></li>
-				</ul>
-			</div>
-			<div class="socialLinks">
-				<h1>CONTACT ME</h1><br/>
-				<p><a href="#" mailto="#">thebakersboxcafe@gmail.com</a></p>
-			</div>
-		</div>
-		<div id="footerNav">
-			<ul>
-				<li><a href="/">HOME</a></li>
-				<li><a href="/pricing">PRICING</a></li>
-				<li><a href="#">GALLERY</a></li>
-				<li><a href="/contact">CONTACT</a></li>
-			</ul>
-		</div>
-	</div>
-</footer>
-
-<script src="../assets/js/parallax.js" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="../assets/js/headerMotion.js" type="text/javascript"></script>
+    <script src="../assets/js/parallax.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="../assets/js/headerMotion.js" type="text/javascript"></script>
 
 </body>
 {{end}}

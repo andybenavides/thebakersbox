@@ -14,6 +14,7 @@ type Image struct {
 	Url string `json:"Url"`
 	Title string `json:"Title"`
     Price string `json:"Price"`
+    Type string `json:"Type"`
 }
 
 var tpl *template.Template

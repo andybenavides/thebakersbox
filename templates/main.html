@@ -5,7 +5,7 @@
             <h1 id="mainHeader">
 				<p>The<br/>Bakers<br/>Box<br/>Cafe</p>
 			</h1>
-            <div class="big-red-button"><a href="/gallery">Shop Now</a></div>
+            <div class="big-red-button delay-item"><a href="/gallery"><span>Shop Now</span><img src="../assets/img/icons/shopping-bag.svg" class="svg shopping-bag-icon"/></a></div>
         </div>
     </div>
     <div id="about">
@@ -18,8 +18,8 @@
 				I look forward to opening my door to greet you with your order soon.
 			</span>
         </div>
-        <div class="fade-in-scroll">
-            <a id="contact-me-button" href="/contact">Contact Me  <img id="mail-icon" class="svg env-icon" src="../assets/img/icons/envelope.svg"/></a>
+        <div class="fade-in-scroll contact-me-button">
+            <a id="contact-me-button" href="/contact"><span>Contact Me</span><img id="mail-icon" class="svg env-icon" src="../assets/img/icons/envelope.svg"/></a>
         </div>
     </div>
     <div id="smallGalleryContainer">
@@ -31,14 +31,21 @@
         <div class="smallGallery">
             {{ range . }}
             <div class="galleryItem">
-                <a href="/gallery"><img src="{{ .Url }}" alt="{{ .Title }}"></a>
+                <a href="/gallery">
+                    <span class="infoPaneMain">
+                        <h1>Shop </h1><br/>
+                        <p>{{ .Type }}</p>
+                    </span>
+                    <img src="{{ .Url }}" alt="{{ .Title }}">
+                </a>
             </div>
             {{ end }}
         </div>
-        <div id="instaLink"><a href="#">See more on Instagram</a></div>
+        <div class="instaLink fade-in-scroll">
+            <a href="https://www.instagram.com/thebakersboxcafe/">See more on Instagram</a>
+        </div>
     </div>
-    <div class="social parallax"></div>
-    <div class="action-banner">
+    <div class="action-banner parallax">
         <div id="action-banner-one" class="fade-in-scroll">
             <h1>Have a question?<br/>Ready to order?</h1>
             <span>Don't be shy...</span>

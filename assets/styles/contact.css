@@ -142,13 +142,13 @@ select {
     border-radius: 3px;
 }
 
-.delay-item{
+.delay-item {
     position: relative;
     top: 50px;
     opacity: 0;
 }
 
-.delay-item-header{
+.delay-item-header {
     position: relative;
     opacity: 0;
 }

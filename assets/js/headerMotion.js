@@ -11,11 +11,22 @@ $(document).ready(function() {
         $(".galleryItem, .fade-in-scroll").each(function(i) {
             var object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if (bottom_of_window > (object + 3100)) {
+            if (bottom_of_window > (object + 2300)) {
                 $(this).delay(i * 100).animate({
                     top: '0px',
                     opacity: 1
                 }, 500);
+            }
+        }); 
+        
+        $("#smallGalleryContainer").each(function(i) {
+            var object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > (object + 1700)) {
+                $(this).delay(i * 100).animate({
+                    top: '0px',
+                    opacity: 1
+                }, 550);
             }
         });
     });
