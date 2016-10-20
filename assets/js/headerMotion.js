@@ -11,22 +11,11 @@ $(document).ready(function() {
         $(".galleryItem, .fade-in-scroll").each(function(i) {
             var object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if (bottom_of_window > (object + 2300)) {
+            if (bottom_of_window > (object + 3200)) {
                 $(this).delay(i * 100).animate({
                     top: '0px',
                     opacity: 1
                 }, 500);
-            }
-        }); 
-        
-        $("#smallGalleryContainer").each(function(i) {
-            var object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if (bottom_of_window > (object + 1700)) {
-                $(this).delay(i * 100).animate({
-                    top: '0px',
-                    opacity: 1
-                }, 550);
             }
         });
     });
@@ -51,98 +40,74 @@ $(document).ready(function() {
             opacity: 1
         }, 250);
     });
-    
+
     $(".delay-item-header").each(function(i) {
         $(this).delay(i * 500).animate({
             opacity: 1
         }, 750);
     });
 
-    // Form Validation
+    $('#mobileHeaderOpen').click(function() {
+        $("header").animate({
+            'left': '0vw'
+        }, 500);
+        $('#mobileHeaderOpen svg').animate({
+            'left': '100vw'
+        }, 500);
+    });
+    $('#mobileHeaderClose svg').click(function() {
+        $("header").animate({
+            'left': '100vw'
+        }, 500);
+        $('#mobileHeaderOpen svg').animate({
+            'left': '0vw'
+        }, 500);
+    });
 
-    // Set error flags for each field
-    //    var fnLenErr, fnNumErr, messageErr, emailErr, lnLenErr, lnNumErr = false;
-    //    var fnLenVal, fnNumVal, messageVal, emailVal, lnLenVal, lnNumVal = false;
-    //
-    //    $("#firstName").keyup(function () {
-    //        if ((($(this).val().length) <= 1) && !fnLenErr) {
-    //            $('.minLength').remove();
-    //            $("fieldset").prepend("<p class=\"minLength err\">Please enter at least 2 characters</p>");
-    //            $('.minLength').animate({opacity: 1, top: '10px'}, 150);
-    //            fnLenErr = true;
-    //        } else if ($(this).val().length > 1) {
-    //            $(".minLength").animate({opacity: 0, top: '-10px'}, 150);
-    //            fnLenErr = false;
-    //            fnLenVal = true;
-    //        }
-    //        if ((/[0-9]/.test($(this).val())) && !fnNumErr) {
-    //            $('.numErr').remove();
-    //            fnNumErr = true;
-    //            $("fieldset").prepend("<p class=\"numErr err\">It looks like there is a number in your name!</p>");
-    //            $('.numErr').animate({opacity: 1, top: '10px'}, 150);
-    //        } else if (!(/[0-9]/.test($(this).val()))) {
-    //            $(".numErr").animate({opacity: 0, top: '-10px'}, 150);
-    //            fnNumErr = false;
-    //            fnNumVal = true;
-    //        }
-    //    });
-    //
-    //    $("#lastName").keyup(function () {
-    //        if ((($(this).val().length) <= 1) && !lnLenErr) {
-    //            $('.LNlenErr').remove();
-    //            $("fieldset").before("<p class=\"LNlenErr err\">Please enter at least 2 characters</p>");
-    //            $('.LNlenErr').animate({opacity: 1, top: '10px'}, 150);
-    //            lnLenErr = true;
-    //        } else if ($(this).val().length > 1) {
-    //            $(".LNlenErr").animate({opacity: 0, top: '-10px'}, 150);
-    //            lnLenErr = false;
-    //            lnLenVal = true;
-    //        }
-    //        if ((/[0-9]/.test($(this).val())) && !lnNumErr) {
-    //            $('.LNnumErr').remove();
-    //            lnNumErr = true;
-    //            $("fieldset").prepend("<p class=\"LNnumErr err\">It looks like there is a number in your name!</p>");
-    //            $(".LNnumErr").animate({opacity: 1, top: '10px'}, 150);
-    //        } else if (!(/[0-9]/.test($(this).val()))) {
-    //            $(".LNnumErr").animate({opacity: 0, top: '-10px'}, 150);
-    //            lnNumErr = false;
-    //            lnNumVal = true;
-    //        }
-    //    });
-    //
-    //    $("#email").keyup(function () {
-    //        if (!validateEmail($(this).val()) && !emailErr && $(this).val().length > 4) {
-    //            $('.emailErr').remove();
-    //            emailErr = true;
-    //            $("fieldset").after("<p class=\"emailErr err\">Please enter a valid email address</p>");
-    //            $('.emailErr').animate({opacity: 1, top: '10px'}, 150);
-    //        } else if (validateEmail($(this).val())) {
-    //            $(".emailErr").animate({opacity: 0, top: '-10px'}, 150);
-    //            emailErr = false;
-    //            emailVal = true;
-    //        }
-    //    });
-    //
-    //    $("#message").keyup(function () {
-    //        if ($(this).val().length < 10 && !messageErr) {
-    //            $('.messageErr').remove();
-    //            $("textarea").before("<p class=\"messageErr err\">You gotta send me something!</p>");
-    //            $('.messageErr').animate({opacity: 1, top: '10px'}, 150);
-    //            messageErr = true;
-    //        } else if ($(this).val().length > 10) {
-    //            $(".messageErr").animate({opacity: 0, top: '-10px'}, 150);
-    //            messageErr = false;
-    //            messageVal = true;
-    //        }
-    //    });
-    //
-    //    // Check for valid inputs before enabling send button
-    //    $('form').keyup(function () {
-    //        if (!fnLenErr && !fnNumErr && !messageErr && !emailErr && !lnLenErr && !lnNumErr && ($('#message').val().length > 0))
-    //            $('button').prop('disabled', false);
-    //        else
-    //            $('button').prop('disabled', true);
-    //    });
+    // Main Page Slider
+
+    $('.slide').first().addClass('active-slide').css('display', 'flex');
+    $('.dot').first().addClass('active-dot');
+
+    $('.arrow-next').click(function(e) {
+        e.preventDefault();
+        var currentSlide = $('.active-slide');
+        var nextSlide = currentSlide.next();
+
+        var currentDot = $('.active-dot');
+        var nextDot = currentDot.next();
+
+        if (nextSlide.length === 0) {
+            nextSlide = $('.slide').first();
+            nextDot = $('.dot').first();
+        }
+
+        currentSlide.fadeOut(600).removeClass('active-slide');
+        nextSlide.fadeIn(600).addClass('active-slide').css('display', 'flex');
+        currentDot.removeClass('active-dot');
+        nextDot.addClass('active-dot');
+    });
+
+    $('.arrow-prev').click(function(e) {
+        e.preventDefault();
+        var currentSlide = $('.active-slide');
+        var prevSlide = currentSlide.prev();
+
+        var currentDot = $('.active-dot');
+        var prevDot = currentDot.prev();
+
+        if (prevSlide.length === 0) {
+            prevSlide = $('.slide').last();
+            prevDot = $('.dot').last();
+        }
+
+        currentSlide.fadeOut(600).removeClass('active-slide');
+        prevSlide.fadeIn(600).addClass('active-slide');
+        currentDot.removeClass('active-dot');
+        prevDot.addClass('active-dot');
+    });
+
+
 
 });
 
@@ -166,9 +131,41 @@ $('img.svg').each(function() {
         $svg = $svg.removeAttr('xmlns:a');
 
         if (!$svg.attr('veiwBox') && $svg.attr('height') && $svg.attr('width')) {
-            $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+            $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'));
         }
 
         $img.replaceWith($svg);
     }, 'xml');
 });
+
+// Parallax 
+
+(function() {
+
+    // get all tags with parallax class
+    var parallax = document.querySelectorAll(".parallax");
+    var parallax2 = document.querySelectorAll(".parallax2");
+
+    // activate function on scroll
+    window.onscroll = function() {
+
+        // run offset on each tag individually
+        [].slice.call(parallax).forEach(function(elem) {
+
+            var windowYOffset = window.pageYOffset,
+                elBackgroundPos = "0%" + (windowYOffset * 0.1) + "%";
+
+            elem.style.backgroundPosition = elBackgroundPos;
+
+        });
+
+        [].slice.call(parallax2).forEach(function(elem) {
+
+            var windowYOffset = window.pageYOffset,
+                elBackgroundPos = "0%" + ((windowYOffset - 2000) * 0.1) + "%";
+
+            elem.style.backgroundPosition = elBackgroundPos;
+
+        });
+    };
+})();

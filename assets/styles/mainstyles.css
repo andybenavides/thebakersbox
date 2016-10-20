@@ -145,18 +145,18 @@ table {
 }
 
 .mainWrapper {
-    height: 88vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: url(../img/IMG_3084.jpg) no-repeat top left;
+    background: url(../img/SingleCupcakePlateAngle2.jpg) no-repeat 0% 0%;
     background-size: cover;
 }
 
 #mainHeader {
-    font-size: 7em;
+    font-size: 5em;
     font-weight: 300;
     width: 100vw;
     text-align: center;
@@ -300,7 +300,6 @@ table {
 }
 
 #about {
-    padding: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,6 +307,9 @@ table {
     background-color: white;
     line-height: 1;
     text-align: center;
+    background: url("../img/PinkFlowerCookie.jpg") no-repeat fixed 0% 30%;
+    background-size: cover;
+    height: 120vh;
 }
 
 #bioTitle {
@@ -315,17 +317,18 @@ table {
     font-size: 3rem;
     font-weight: 700;
     text-align: left;
-    color: #67aeca;
+    /*    color: #67aeca;*/
+    color: white;
     font-family: 'Karla', sans-serif;
     letter-spacing: 0.05em;
 }
 
 #bioBody {
-    color: black;
+    color: white;
     display: flex;
     text-align: center;
     font-size: 1.1rem;
-    max-width: 50vw;
+    max-width: 35vw;
     line-height: 1.5;
     margin: 5vh auto;
 }
@@ -351,10 +354,11 @@ hr {
     justify-content: center;
     align-items: center;
     padding: 2vh 3vw;
-    background-color: #67aeca;
+    background-color: #63bada;
     color: white;
     border-radius: 3px;
     font-size: 1rem;
+    margin-top: 8vh;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -ms-transition: all 0.1s ease-in-out;
@@ -483,9 +487,87 @@ svg.env-icon {
     align-items: center;
     max-width: 90vw;
     margin: auto;
-    background: #e5e5e5;
+    background: #f2f2f2;
     margin-bottom: 7vh;
 }
+
+
+/*  Styles for slider on main page */
+
+.slider {
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+}
+
+.slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.slide p {
+    font-size: 1rem;
+    margin: 2vw;
+    color: #63bada;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.slider-nav {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100vw;
+    margin: 40vh 0;
+    z-index: 100;
+}
+
+.arrow-prev,
+.arrow-next {
+    color: white;
+    margin: 0 2vw;
+    font-size: 2rem;
+    transition: color 600ms ease;
+    -webkit-transition: color 600ms ease;
+    -moz-transition: color 600ms ease;
+    -ms-transition: color 600ms ease;
+    -o-transition: color 600ms ease;
+}
+
+.arrow-prev:hover,
+.arrow-next:hover {
+    color: #363636;
+}
+
+.slider-dots {
+    list-style: none;
+}
+
+.slider-dots li {
+    color: white;
+    display: inline;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.slider-dots li.active-dot {
+    color: #363636;
+}
+
+
+/*  End styles for slider on main page */
 
 .galleryItem:hover img {
     -webkit-transform: scale(1.1, 1.1);
@@ -517,12 +599,11 @@ span.infoPaneMain {
 }
 
 span.infoPaneMain h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 span.infoPaneMain p {
     color: #e52a6f;
-    font-style: italic;
     font-size: 1.5rem;
 }
 
@@ -547,8 +628,12 @@ span.infoPaneMain * {
 }
 
 #see-more-btn a {
-    font-size: 3rem;
-    color: #675682;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: #67aeca;
+    border: solid 1px #67aeca;
+    padding: 2vh 3vw;
+    border-radius: 2px;
     -webkit-transition: all 250ms;
     -moz-transition: all 250ms;
     -ms-transition: all 250ms;
@@ -557,7 +642,9 @@ span.infoPaneMain * {
 }
 
 #see-more-btn a:hover {
-    opacity: 0.8;
+    background-color: #67aeca;
+    color: white;
+    border: solid #67aeca;
 }
 
 .imageButton {
@@ -572,17 +659,18 @@ span.infoPaneMain * {
 }
 
 .action-banner {
-    height: 70vh;
+    height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url('../img/TheBakersBoxCookieDark2.jpg') center top no-repeat;
+    background: url("../img/roseCookiesTopShot.jpg") no-repeat fixed 0% 0%;
+    background-size: cover;
 }
 
 #action-banner-one {
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-size: 2.7rem;
+    font-weight: 700;
     line-height: 2;
     text-align: center;
 }
@@ -675,7 +763,7 @@ span.infoPaneMain * {
 }
 
 #bigGalleryContainer {
-    background-color: #675682;
+    background: url("../img/plethora-colored.jpg") repeat-y top left;
     padding: 12vh auto;
     display: flex;
     flex-direction: column;
@@ -789,65 +877,198 @@ span.infoPane * {
 }
 
 #galleryHeading {
-    padding: 5vh 4vw;
+    padding: 4vh 4vw;
     font-size: 1.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 60vw;
+    margin: auto;
 }
 
 #galleryHeading p {
-    font-size: 1.25rem;
-    margin: 4vh 0;
+    font-size: 1rem;
+    margin: 6vh 0;
+    max-width: 35vw;
     line-height: 2;
     color: black;
     font-style: italic;
     text-align: center;
 }
 
+#mobileHeader {
+    position: fixed;
+    display: none;
+}
+
+#mobileHeader svg {
+    fill: white;
+    transition: all 500ms ease-in-out;
+    position: relative;
+    height: 3.3vh;
+}
+
+#mobileHeader svg:hover {
+    transform: rotate(90deg);
+}
+
+#mobileHeaderOpen svg {
+    position: relative;
+}
+
+#mobileHeaderClose svg {
+    margin: 5vh;
+    display: none;
+}
+
+#mobileHeaderClose {
+    display: none;
+}
+
+
 /*************** STYLES FOR HANDHELDS ***************/
 
-@media (max-width: 750px){
-    
-    #mainHeader{
+@media (max-width: 750px) {
+    header {
+        height: 100vh;
+        background-color: #67aeca;
+        position: fixed;
+        left: -100vw;
+        z-index: 1;
+    }
+    header ul {
+        text-align: center;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+    #mobileHeader {
+        display: block;
+        margin: 5vh;
+        z-index: 1000;
+    }
+    #mobileHeader img {
+        height: 4vh;
+        display: none;
+    }
+    #mobileHeaderClose {
+        display: block;
+    }
+    #logo {
+        font-weight: 700;
+        font-size: 4rem;
+        color: white;
+    }
+    #nav-links-pull-right {
+        justify-content: center;
+        flex-direction: column;
+    }
+    header ul .MenuLink {
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    header ul span li {
+        margin: 3vh 3vw;
+    }
+    #socialLinks li a svg {
+        height: 6vh;
+        fill: white;
+    }
+    #mainHeader {
         font-size: 5rem;
     }
-    
-    .big-red-button a{
-        padding: 4vh 19vw;
+    .mainWrapper {
+        height: 100vh;
     }
-    
-    .big-red-button a span{
-        left; 12%;
+    .big-red-button a {
+        padding: 4vh 22vw;
     }
-    .contact-me-button a span{
-        left: 7px;
+    .big-red-button a span {
+        left: -12%;
     }
-    .smallGallery div{
+    .big-red-button a svg {
+        opacity: 1;
+        left: 0;
+    }
+    .contact-me-button a span {
+        left: -5px;
+    }
+    svg.env-icon {
+        opacity: 1;
+        left: 0px;
+        width: 5.5vw;
+    }
+    .smallGallery div {
         width: 90vw;
         max-height: 15vh;
     }
-    .instaLink a{
+    .instaLink a {
         padding: 4vh 7vw;
     }
-    #smallGalleryContainer{
+    #smallGalleryContainer {
         max-width: 100vw;
         margin-bottom: 0;
     }
-    
-    
-    footer{
+    #bioBody {
+        max-width: 90vw;
+        width: 80vw;
+    }
+    #contact-me-button {
+        padding: 4vh 15vw;
+    }
+    #galleryHeading p {
+        width: 80vw;
+    }
+    span.infoPaneMain {
+        top: 0;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    footer {
         height: auto !important;
     }
-    #footerWrapper{
+    footer div * {
+        font-size: 1.25rem;
+    }
+    #footerWrapper {
         flex-direction: column !important;
         text-align: center !important;
         align-items: center !important;
     }
-    #footerWrapper div{
+    #footerWrapper div {
         margin: 2vh 4vw !important;
     }
-    
-    
+    .socialLinks img {
+        width: 10vw !important;
+    }
+    .contactPage p {
+        width: 90vw;
+    }
+    form {
+        width: 80vw;
+    }
+    form input {
+        height: 7vh;
+    }
+    select {
+        height: 7vh;
+    }
+    form button {
+        width: 80vw;
+        height: 7vh;
+        background-color: #e52a6f !important;
+        color: white;
+    }
+    #submit svg {
+        opacity: 1;
+        left: 0px;
+    }
+    form span {
+        left: 0px;
+        margin: 0 2vw;
+    }
+    #galleryHeading {
+        margin: auto;
+        text-align: center;
+    }
 }

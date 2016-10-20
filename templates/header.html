@@ -15,11 +15,14 @@
 </head>
 
 <body>
-    <header class="delay-item-header">
+    <header>
+        <div id="mobileHeaderClose">
+            <img class="svg" src="../assets/img/icons/1473768912_button_close.svg" />
+        </div>
         <ul>
             <span>
 		<li>
-			<a href="/" class="MenuLink" id="logo">The Bakers Box Cafe</a>
+			<a href="/" class="MenuLink" id="logo">The<br/> Bakers Box <br/>Cafe</a>
 		</li>
 		</span>
             <span id="nav-links-pull-right">
@@ -36,15 +39,20 @@
             <span>
 			<ul id="socialLinks">
 				<li>
-					<a href="#"><img src="../assets/img/icons/1467925875_instagram-social-media-camera-photo.svg"/></a>
+					<a href="#"><img src="../assets/img/icons/1467925875_instagram-social-media-camera-photo.svg" class="svg insta-svg"/></a>
 				</li>
 				<li>
-					<a href="#"><img src="../assets/img/icons/1467925969_mail-container-storage-brand.svg"/></a>
+					<a href="#"><img src="../assets/img/icons/1467925969_mail-container-storage-brand.svg" class="svg"/></a>
 				</li>
 			</ul>
 		</span>
         </ul>
     </header>
+    <div id="mobileHeader">
+        <div id="mobileHeaderOpen">
+            <img class="svg" src="../assets/img/icons/1473762264_menu-24.svg" />
+        </div>
+    </div>
     {{end}} {{define "footer"}}
     <footer>
         <div id="footerWrapper">
@@ -83,8 +91,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="../assets/js/parallax.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="../assets/js/headerMotion.js" type="text/javascript"></script>
 

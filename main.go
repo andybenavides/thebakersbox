@@ -17,6 +17,13 @@ type Image struct {
     Type string `json:"Type"`
 }
 
+type Carousel struct{
+    id int `json:"id"`
+    Url string `json:"Url"`
+    Title string `json:"Title"`
+    Type string `json:"Type"`
+}
+
 var tpl *template.Template
 
 func init() {
@@ -33,6 +40,7 @@ func init() {
 }
 
 const jsonFile = "./images.json"
+const carouselJSONFile = "./carousel.json"
 
 func homePage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
@@ -42,20 +50,26 @@ func homePage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	//	http.Error(w, fmt.Sprintf("Unable to stat data file (%s): %s", jsonFile, err), http.StatusInternalServerError)
 	//	return
 	//}
-
-	jsonData, error := ioutil.ReadFile(jsonFile)
-	if error != nil {
-		http.Error(w, fmt.Sprintf("Unable to read the data file (%s): %s", jsonFile, error), http.StatusInternalServerError)
-		return
-	}
-
-	var images []Image
-	err := json.Unmarshal(jsonData, &images)
+//
+//	jsonData, error := ioutil.ReadFile(jsonFile)
+//	if error != nil {
+//		http.Error(w, fmt.Sprintf("Unable to read the data file (%s): %s", jsonFile, error), http.StatusInternalServerError)
+//		return
+//	}
+    
+    jsonData, error := ioutil.ReadFile(carouselJSONFile)
+    if error != nil {
+        http.Error(w, fmt.Sprintf("Unable to read the data file (%s): %s", carouselJSONFile, error), http.StatusInternalServerError)
+        return
+    }
+    
+	var carousels []Carousel
+	err := json.Unmarshal(jsonData, &carousels)
 	if err != nil {
 		fmt.Println("error:", err)
 	}
 
-    tpl.ExecuteTemplate(w, "main.html", images[0:6])
+    tpl.ExecuteTemplate(w, "main.html", carousels)
 }
 
 func galleryPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {

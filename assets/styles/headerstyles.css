@@ -1,11 +1,13 @@
 header {
     width: 100vw;
     height: 12vh;
-    transition: all 150ms ease;
-    -webkit-transition: all 150ms ease;
-    -moz-transition: all 150ms ease;
+    transition: all 550ms ease;
+    -webkit-transition: all 550ms ease;
+    -moz-transition: all 550ms ease;
+    -ms-transition: all 550ms ease;
     z-index: 9999;
     margin: 0vh auto !important;
+    position: absolute;
 }
 
 header ul {
@@ -16,7 +18,7 @@ header ul {
     margin: auto;
 }
 
-header ul span li{
+header ul span li {
     margin: 0em 3vw 0em 3vw;
 }
 
@@ -26,7 +28,11 @@ header ul span li a {
     -moz-transition: all 500ms ease-in-out;
     -ms-transition: all 500ms ease-in-out;
     text-decoration: none;
-    color: black;
+    color: white;
+}
+
+ul#socialLinks li a svg{
+    width: 2vw;
 }
 
 header ul span li a:hover {
@@ -43,16 +49,16 @@ header ul .MenuLink {
 }
 
 #nav-links-pull-right {
-    width: 100%;
+    width: 35vw;
     display: flex;
     justify-content: flex-start;
 }
 
-#socialLinks li a img{
+#socialLinks li a img {
     height: 4vh;
 }
 
-#socialLinks li a img:hover{
+#socialLinks li a img:hover {
     opacity: 0.8;
 }
 
@@ -60,6 +66,7 @@ header ul .MenuLink {
     font-weight: 300;
     font-size: 2em;
     float: left !important;
+    text-align: center;
 }
 
 .shrink {
@@ -98,4 +105,13 @@ header ul .MenuLink {
     font-size: 0.9em;
     font-weight: 700;
     color: #595959;
+}
+
+@media (max-width: 750px) {
+    header ul {
+        text-align: center;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
 }

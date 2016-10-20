@@ -3,13 +3,13 @@
 <div class="contactPage parallax">
     <div class="contact-page-container">
         <h1 class="delay-item">Let's take <em>this</em> to e-mail</h1>
-        <p class="delay-item-header">I'd love to hear from you. </br/>Shoot me an e-mail including what your sweet tooth is demanding.</p>
+        <p class="delay-item-header">I'd love to hear from you. <br/>Shoot me an e-mail including what your sweet tooth is demanding.</p>
         <form action="/sendEmail" method="POST" class="delay-item">
             <fieldset>
                 <h3>First Name</h3>
-                <input id="firstName" name="firstName" type="text" autofocus>
+                <input id="firstName" name="firstName" type="text" autofocus required>
                 <h3>Last Name</h3>
-                <input id="lastName" name="lastName" type="text">
+                <input id="lastName" name="lastName" type="text" required>
                 <h3>e-mail address</h3>
                 <input id="email" name="email" type="email" required>
             </fieldset>
@@ -30,7 +30,7 @@
             </fieldset>
             <h3>The details</h3>
             <textarea id="message" name="message" placeholder="My 5 year old son is having a Spiderman themed birthday party next month and I would like 2 dozen Spiderman cookies!" required></textarea>
-            <button id="submit" type="submit" disabled="disabled">SEND</button>
+            <button id="submit" type="submit"><span>Send</span><img src="../assets/img/icons/paper-plane.svg" class="svg arrow"/></button>
         </form>
     </div>
 </div>
