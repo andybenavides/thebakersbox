@@ -7,7 +7,7 @@
     </div>
     <div class="bigGallery">
         {{ range . }}
-        <div class="bigGalleryItem" data="{{ .Title }}">
+        <div class="bigGalleryItem {{ .Type }}" data="{{ .Title }}">
             <img src="{{ .Url }}" alt="{{ .Title }}">
             <span class="infoPane">
                 <h1>{{ .Title }}</h1>

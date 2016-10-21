@@ -82,8 +82,8 @@ $(document).ready(function() {
             nextDot = $('.dot').first();
         }
 
-        currentSlide.fadeOut(600).removeClass('active-slide');
-        nextSlide.fadeIn(600).addClass('active-slide').css('display', 'flex');
+        currentSlide.fadeOut(500).removeClass('active-slide');
+        nextSlide.fadeIn(500).addClass('active-slide').css('display', 'flex');
         currentDot.removeClass('active-dot');
         nextDot.addClass('active-dot');
     });
@@ -101,8 +101,8 @@ $(document).ready(function() {
             prevDot = $('.dot').last();
         }
 
-        currentSlide.fadeOut(600).removeClass('active-slide');
-        prevSlide.fadeIn(600).addClass('active-slide');
+        currentSlide.fadeOut(500).removeClass('active-slide');
+        prevSlide.fadeIn(500).addClass('active-slide');
         currentDot.removeClass('active-dot');
         prevDot.addClass('active-dot');
     });

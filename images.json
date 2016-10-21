@@ -27,7 +27,7 @@
     "Url": "assets/img/galleria/Macaroons.jpg",
     "Title": "Placeholder Title",
     "Price": "$5 per dozen",
-    "Type": "Cookies"
+    "Type": "Macaroons"
 
 }, {
     "id": 5,
@@ -40,13 +40,13 @@
     "Url": "assets/img/galleria/bread.jpg",
     "Title": "Placeholder Title Bread",
     "Price": "$5 per dozen",
-    "Type": "Cookies"
+    "Type": "Bread"
 }, {
     "id": 1,
     "Url": "assets/img/galleria/assortedCupcakes.jpg",
     "Title": "Placeholder Title",
     "Price": "$5 per dozen",
-    "Type": "Cookies"
+    "Type": "Cupcakes"
 }, {
     "id": 2,
     "Url": "assets/img/galleria/cupcakeCookie.jpg",
@@ -64,12 +64,12 @@
     "Url": "assets/img/galleria/Macaroons.jpg",
     "Title": "Placeholder Title",
     "Price": "$5 per dozen",
-    "Type": "Cookies"
+    "Type": "Macaroons"
 
 }, {
     "id": 5,
     "Url": "assets/img/galleria/twoCupcakes.jpg",
     "Title": "Placeholder Title",
     "Price": "$5 per dozen",
-    "Type": "Cookies"
+    "Type": "Cupcakes"
 }]
