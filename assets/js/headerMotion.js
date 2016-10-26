@@ -107,8 +107,27 @@ $(document).ready(function() {
         prevDot.addClass('active-dot');
     });
 
+    // --------------- Filter Gallery Logic --------------- //
+
+    $('#galleryFilterList li').click(function() {
+        var currentFilter = $('.active');
+        var clickedFilter = $(this).text();
+        currentFilter.removeClass('active');
+        $(this).addClass('active');
+        if($(this).text() != 'all'){
+            $('.bigGalleryItem').fadeOut(500);
+            $('.bigGalleryItem.' + clickedFilter).fadeIn(500);
+            
+        }else{
+            $('.bigGalleryItem').fadeIn(500);
+        }
+
+    });
 
 
+
+
+    // ------------- End Filter Gallery Logic ------------- //
 });
 
 function validateEmail(email) {

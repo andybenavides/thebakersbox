@@ -529,7 +529,7 @@ svg.env-icon {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width:100vw;
+    width: 100vw;
     margin: 40vh 0;
     z-index: 100;
 }
@@ -852,6 +852,38 @@ span.infoPane * {
     top: 50px;
 }
 
+#galleryFilter * {
+    color: black;
+}
+
+#galleryFilter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#galleryFilter ul {
+    display: flex;
+}
+
+#galleryFilter ul li {
+    margin: 5vh 1vw;
+    border-radius: 3px;
+    padding: 0.75vh 1vw;
+    transition: all 250ms ease;
+}
+
+#galleryFilter ul li.active {
+    background-color: #67aeca !important;
+    color: white !important;
+}
+
+#galleryFilter ul li:hover {
+    background-color: gainsboro;
+    color: white;
+    cursor: pointer;
+}
+
 .bigGallery div {
     display: flex;
     flex-direction: column;
@@ -877,13 +909,16 @@ span.infoPane * {
 }
 
 #galleryHeading {
-    padding: 4vh 4vw;
     font-size: 1.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 60vw;
+    width: 100vw;
     margin: auto;
+    background: url('../img/strawberryCupcakeSmall.jpg') no-repeat fixed 0% 0%;
+    padding-top: 20vh;
+    margin-bottom: 1vh;
+    background-size: cover;
 }
 
 #galleryHeading p {
