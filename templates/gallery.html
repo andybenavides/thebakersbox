@@ -5,28 +5,33 @@
         <h1 class="bigGalleryHeader">You've reached the gallery</h1>
         <p class="bigGalleryBody">This is test text. You can of course add important information about whatever. You could also include information about the different items offered. Ideally you would have something cool here that helps customers navigate the site or at least something cool and maybe even a little funny.</p>
     </div>
-    <div id="galleryFilter">
-        <h1>Filter: </h1>
-        <ul id="galleryFilterList">
-            <li class="active">all</li>
-            <li>cookies</li>
-            <li>cupcakes</li>
-            <li>bread</li>
-            <li>macaroons</li>
+    <div id="filter">
+        <ul id="filter-list">
+            <li id="all">all</li>
+            <li id="cookies">cookies</li>
+            <li id="cupcakes">cupcakes</li>
+            <li id="bread">bread</li>
+            <li id="macaroons">macaroons</li>
         </ul>
     </div>
     <div class="bigGallery">
         {{ range . }}
         <div class="bigGalleryItem {{ .Type }}">
             <img src="{{ .Url }}" alt="{{ .Title }}">
+            <span class="order-now-button">Order now</span>
             <span class="infoPane">
-                <h1>{{ .Title }}</h1>
-                <p>{{ .Price }}</p>
-            </span>
+                <div id="infoPaneDetails">
+                    <h1>{{ .Title }}</h1>
+                    <p>{{ .Price }}</p>
+                </div>
+                <div id="info-pane-likes">
+                    <h2><img id="heart" src="../assets/img/icons/empty-heart.png"></h2><span>{{ .Likes }}</span>
         </div>
-        {{ end }}
+        </span>
     </div>
-    <div class="instaLink"><a href="https://www.instagram.com/thebakersboxcafe/">See more on Instagram</a></div>
+    {{ end }}
+</div>
+<div class="instaLink"><a href="https://www.instagram.com/thebakersboxcafe/">See more on Instagram</a></div>
 </div>
 
 {{template "footer"}}

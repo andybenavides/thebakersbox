@@ -11,20 +11,13 @@ $(document).ready(function() {
         $(".galleryItem, .fade-in-scroll").each(function(i) {
             var object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if (bottom_of_window > (object + 3200)) {
+            if (bottom_of_window > (object + 3000)) {
                 $(this).delay(i * 100).animate({
                     top: '0px',
                     opacity: 1
                 }, 500);
             }
         });
-    });
-
-    $(".bigGalleryItem").each(function(i) {
-        $(this).delay(i * 100).animate({
-            top: '0px',
-            opacity: 1
-        }, 300);
     });
 
     $(".bigGalleryHeader, .bigGalleryBody").each(function(i) {
@@ -109,25 +102,59 @@ $(document).ready(function() {
 
     // --------------- Filter Gallery Logic --------------- //
 
-    $('#galleryFilterList li').click(function() {
+    if (location.search != '') {
+        var url = location.search.split("?")[1];
+        $('.bigGalleryItem').hide();
+        $('.bigGalleryItem.' + url).fadeIn(300);
+        if (url != 'all') {
+            $('#' + url).addClass('active');
+        } else {
+            $('#all').addClass('active');
+        }
+    }
+
+
+    $('#filter-list li').click(function() {
         var currentFilter = $('.active');
         var clickedFilter = $(this).text();
         currentFilter.removeClass('active');
         $(this).addClass('active');
-        if($(this).text() != 'all'){
-            $('.bigGalleryItem').fadeOut(500);
-            $('.bigGalleryItem.' + clickedFilter).fadeIn(500);
-            
-        }else{
-            $('.bigGalleryItem').fadeIn(500);
+        if ($(this).text() != 'all') {
+            $('.bigGalleryItem').hide();
+            $('.bigGalleryItem.' + clickedFilter).fadeIn(300);
+
+        } else {
+            $('.bigGalleryItem').fadeIn(300);
         }
 
     });
 
-
-
-
     // ------------- End Filter Gallery Logic ------------- //
+
+
+    // --------------- Filter Pricing Logic --------------- //
+
+    $('#filter-list li').click(function() {
+        var currentFilter = $(".active-pricing");
+        var clickedFilter = $(this).text();
+        currentFilter.removeClass('active-pricing');
+        $(this).addClass('active-pricing');
+        $('.pricing-panel').hide();
+        $('#' + clickedFilter + '-pricing').fadeIn(300).css('display', 'flex');
+    });
+
+    // ------------- End Filter Pricing Logic ------------- //
+
+    // --------------- Likes icon animation --------------- //
+
+    $("img#heart").click(function() {
+        $(this).attr('src', '../assets/img/icons/heart.png');
+        $(this).off();
+    });
+
+    // ------------- End Likes icon animation ------------- //
+
+
 });
 
 function validateEmail(email) {

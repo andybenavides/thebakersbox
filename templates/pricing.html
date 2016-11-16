@@ -1,11 +1,87 @@
 {{ template "header"}}
-
 <div class="pricingContainer">
-
+    <div id="pricing-header">
+        <h1>Pricing</h1>
+    </div>
+    <div>
+        <div id="pricing-body">
+            <div id="filter">
+                <ul id="filter-list">
+                    <li id="cookies" class="active-pricing">cookies</li>
+                    <li id="cupcakes">cupcakes</li>
+                    <li id="bread">bread</li>
+                    <li id="macaroons">macaroons</li>
+                    <li id="thins">thins</li>
+                    <li id="cinnamon-rolls">cinnamon-rolls</li>
+                </ul>
+            </div>
+        </div>
+        <div class="pricing-panel active-pricing" id="cookies-pricing">
+            <h1>Decorated Sugar Cookies</h1>
+            <div class="simple-divider"></div>
+            <div class="pricing-panel-body">
+                <h2>$20-$45 per dozen</h2>
+                <p>*Prices varies per size and detail</p>
+                <h3>$10 boxed set</h3>
+                <p>3 regular or 5 mini size</p>
+            </div>
+        </div>
+        <div class="pricing-panel" id="cupcakes-pricing">
+            <h1>Cupcakes</h1>
+            <div class="simple-divider"></div>
+            <div class="pricing-panel-body">
+                <h2>$25 per dozen</h2>
+                <p>add $10 for Fondant topping</p>
+                <h2>Flavors</h2>
+                <p>Vanilla</p>
+                <p>Strawberry</p>
+                <p>Lemon</p>
+                <p>Red Velvet</p>
+                <p>Chocolate</p>
+                <p>Banana Nut</p>
+                <p>Marble</p>
+                <p>Snickerdoodle (churro)</p>
+                <h2>Frostings</h2>
+                <p>Vanilla Buttercream</p>
+                <p>Strawberry Buttercream</p>
+                <p>Oreo Buttercream</p>
+                <p>Lemon Buttercream</p>
+                <p>Coffee Buttercream</p>
+            </div>
+        </div>
+        <div class="pricing-panel" id="bread-pricing">
+            <h1>Loaf Breads</h1>
+            <div class="simple-divider"></div>
+            <div class="pricing-panel-body">
+                <h2>Small</h2>
+                <p>$3</p>
+                <h2>Medium</h2>
+                <p>$7</p>
+                <h2>Large</h2>
+                <p>$14</p>
+                <h2>Flavors</h2>
+                <p>Banana Nut</p>
+                <p>Cranberry</p>
+                <p>Walnut</p>
+                <p>Pumpkin</p>
+            </div>
+        </div>
+        <div class="pricing-panel" id="macaroons-pricing">
+            <p>test4</p>
+        </div>
+        <div class="pricing-panel" id="thins-pricing">
+            <h1>Thins Pricing</h1>
+        </div>
+        <div class="pricing-panel" id="cinnamon-rolls-pricing">
+            <h1>Cinnamon Rolls</h1>
+            <div class="simple-divider"></div>
+            <div class="pricing-panel-body">
+                <h2>Regular</h2>
+                <p>$3 per roll</p>
+                <h2>with Pecan</h2>
+                <p>$3.50 per roll</p>
+            </div>
+        </div>
+    </div>
 </div>
-
-<script>
-
-</script>
-
 {{ template "footer"}}

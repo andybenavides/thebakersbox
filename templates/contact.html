@@ -4,7 +4,7 @@
     <div class="contact-page-container">
         <h1 class="delay-item">Let's take <em>this</em> to e-mail</h1>
         <p class="delay-item-header">I'd love to hear from you. <br/>Shoot me an e-mail including what your sweet tooth is demanding.</p>
-        <form action="/sendEmail" method="POST" class="delay-item">
+        <form action="/sendEmail" method="POST" class="delay-item" name="contact-form">
             <fieldset>
                 <h3>First Name</h3>
                 <input id="firstName" name="firstName" type="text" autofocus required>
@@ -16,7 +16,7 @@
             <fieldset>
                 <div>
                     <h3>Pickup Date</h3>
-                    <input id="pickupDate" name="pickupDate" type="date" placeholder="mm/dd" required>
+                    <input id="pickupDate" name="pickupDate" type="date" placeholder="mm/dd/yyyy" required>
                 </div>
                 <div>
                     <h3>Order</h3>

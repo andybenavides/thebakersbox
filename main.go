@@ -15,6 +15,7 @@ type Image struct {
 	Title string `json:"Title"`
     Price string `json:"Price"`
     Type string `json:"Type"`
+    Likes int `json:"Likes"`
 }
 
 type Carousel struct{
@@ -93,5 +94,6 @@ func galleryPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 }
 
 func pricingPage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+    
 	tpl.ExecuteTemplate(w, "pricing.html", nil)
 }

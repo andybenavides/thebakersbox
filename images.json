@@ -3,73 +3,85 @@
     "Url": "assets/img/galleria/bread.jpg",
     "Title": "Placeholder Title Bread",
     "Price": "$5 per dozen",
-    "Type": "bread"
+    "Type": "bread",
+    "Likes": 3
 }, {
     "id": 1,
     "Url": "assets/img/galleria/assortedCupcakes.jpg",
     "Title": "Placeholder Title",
     "Price": "$5 per dozen",
-    "Type": "cupcakes"
+    "Type": "cupcakes",
+    "Likes": 10
 }, {
     "id": 2,
     "Url": "assets/img/galleria/cupcakeCookie.jpg",
     "Title": "Placeholder Title Cookie",
     "Price": "$5 per dozen",
-    "Type": "cookies"
+    "Type": "cookies",
+    "Likes": 0
 }, {
     "id": 3,
     "Url": "assets/img/galleria/flowerCookies.jpg",
     "Title": "Placeholder Title Cookies",
     "Price": "$5 per dozen",
-    "Type": "cookies"
+    "Type": "cookies",
+    "Likes": 0
 }, {
     "id": 4,
     "Url": "assets/img/galleria/Macaroons.jpg",
     "Title": "Placeholder Title",
     "Price": "$5 per dozen",
-    "Type": "macaroons"
+    "Type": "macaroons",
+    "Likes": 0
 
 }, {
     "id": 5,
     "Url": "assets/img/galleria/twoCupcakes.jpg",
     "Title": "Placeholder Title",
     "Price": "$5 per dozen",
-    "Type": "cookies"
+    "Type": "cookies",
+    "Likes": 0
 }, {
     "id": 0,
     "Url": "assets/img/galleria/bread.jpg",
     "Title": "Placeholder Title Bread",
     "Price": "$5 per dozen",
-    "Type": "bread"
+    "Type": "bread",
+    "Likes": 3
 }, {
     "id": 1,
     "Url": "assets/img/galleria/assortedCupcakes.jpg",
     "Title": "Placeholder Title",
     "Price": "$5 per dozen",
-    "Type": "cupcakes"
+    "Type": "cupcakes",
+    "Likes": 0
 }, {
     "id": 2,
     "Url": "assets/img/galleria/cupcakeCookie.jpg",
     "Title": "Placeholder Title Cookie",
     "Price": "$5 per dozen",
-    "Type": "cookies"
+    "Type": "cookies",
+    "Likes": 0
 }, {
     "id": 3,
     "Url": "assets/img/galleria/flowerCookies.jpg",
     "Title": "Placeholder Title Cookies",
     "Price": "$5 per dozen",
-    "Type": "cookies"
+    "Type": "cookies",
+    "Likes": 2
 }, {
     "id": 4,
     "Url": "assets/img/galleria/Macaroons.jpg",
     "Title": "Placeholder Title",
     "Price": "$5 per dozen",
-    "Type": "macaroons"
+    "Type": "macaroons",
+    "Likes": 0
 
 }, {
     "id": 5,
     "Url": "assets/img/galleria/twoCupcakes.jpg",
     "Title": "Placeholder Title",
     "Price": "$5 per dozen",
-    "Type": "cupcakes"
+    "Type": "cupcakes",
+    "Likes": 0
 }]

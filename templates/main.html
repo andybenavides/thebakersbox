@@ -37,7 +37,9 @@
         {{ range . }}
         <div class="slide parallax2" style="background-image: url({{ .Url }});">
             <h1 class="fade-in-scroll">{{ .Title }}</h1>
-            <p class="fade-in-scroll">Shop {{ .Type }}</p>
+            <a href="/gallery?{{ .Type }}">
+                <p class="fade-in-scroll">Shop {{ .Type }}</p>
+            </a>
         </div>
         {{ end }}
     </div>

@@ -2,20 +2,20 @@
     "id": 0,
     "Url": "assets/img/carousel/blueCupcake.jpg",
     "Title": "Cupcakes",
-    "Type": "Cupcakes"
+    "Type": "cupcakes"
 }, {
     "id": 1,
     "Url": "assets/img/carousel/cinnamonRoll.jpg",
     "Title": "Cinnamon Rolls",
-    "Type": "Cinnamon Rolls"
+    "Type": "cinnamonrolls"
 }, {
     "id": 2,
     "Url": "assets/img/carousel/fourFlowers.jpg",
     "Title": "Decorated Cookies",
-    "Type": "Cookies"
+    "Type": "cookies"
 }, {
     "id": 3,
     "Url": "assets/img/carousel/stackedCookies.jpg",
     "Title": "Thins",
-    "Type": "Thins"
+    "Type": "thins"
 }]

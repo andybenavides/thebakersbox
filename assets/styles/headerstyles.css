@@ -13,13 +13,15 @@ header {
 header ul {
     display: flex;
     align-items: center;
-    height: 100%;
-    width: 80%;
-    margin: auto;
+    justify-content: space-around;
+    padding: 2vh 0;
 }
 
 header ul span li {
-    margin: 0em 3vw 0em 3vw;
+    display: flex;
+    align-items: center;
+    margin: 0em 2vw 0em 2vw;
+    text-transform: lowercase;
 }
 
 header ul span li a {
@@ -33,19 +35,20 @@ header ul span li a {
 
 ul#socialLinks li a svg{
     width: 2vw;
+    color: white;
 }
 
 header ul span li a:hover {
-    color: #a9b7c0;
+    opacity: 0.8;
 }
 
 header ul .MenuLink {
     padding: 1vh 0;
     font-family: 'Karla', sans-serif;
     font-weight: 300;
-    font-size: 1.25rem;
+    font-size: 1rem;
     position: relative;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
 #nav-links-pull-right {
@@ -55,50 +58,14 @@ header ul .MenuLink {
 }
 
 #socialLinks li a img {
-    height: 4vh;
-}
-
-#socialLinks li a img:hover {
-    opacity: 0.8;
+    width: 2vw;
 }
 
 #logo {
-    font-weight: 300;
-    font-size: 2em;
-    float: left !important;
-    text-align: center;
-}
-
-.shrink {
-    height: 10vh;
-    background-color: white;
-}
-
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    font-weight: 700;
+    font-size: 1em;
+    text-align: left;
+    padding-right: 2vw;
 }
 
 .MenuLinkStyle {
