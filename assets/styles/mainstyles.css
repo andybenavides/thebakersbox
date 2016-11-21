@@ -142,6 +142,7 @@ table {
     opacity: 0;
     top: 50px;
     position: relative;
+    text-align: center;
 }
 
 .mainWrapper {
@@ -359,6 +360,24 @@ hr {
     border-radius: 3px;
     font-size: 1rem;
     margin-top: 8vh;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    line-height: 1.6;
+}
+
+#contact-me-button-not-hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 3vw;
+    background-color: #63bada;
+    color: white;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin: 8vh;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -ms-transition: all 0.1s ease-in-out;
@@ -677,6 +696,7 @@ span.infoPaneMain * {
     flex-direction: column;
     background: url("../img/strawberryCupcake.jpg") no-repeat fixed 0% 0%;
     background-size: cover;
+    background-position: center !important;
 }
 
 #action-banner-one {
@@ -803,6 +823,7 @@ span.infoPaneMain * {
     padding: 2vh 0;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .pricing-panel h2,
@@ -818,7 +839,7 @@ span.infoPaneMain * {
     padding-bottom: 2vh;
 }
 
-.pricing-panel-body{
+.pricing-panel-body {
     text-align: center;
 }
 
@@ -861,7 +882,7 @@ span.infoPane {
     background: white;
     color: black;
     z-index: 1000;
-    padding: 2vh 2vw;
+    padding: 2vh 0;
 }
 
 span.infoPane h1 {
@@ -878,7 +899,7 @@ span.infoPane * {
 
 #infoPaneDetails {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 #info-pane-likes {
@@ -907,24 +928,29 @@ span.infoPane * {
 .bigGalleryItem {
     overflow: hidden;
     position: relative;
-    margin: 1.5vh;
-    border-radius: 3px;
-    box-shadow: 0 4px 2px -4px gray;
+    margin: 0.5vh;
+    box-shadow: 0 3px 2px -4px #ccc;
     transition: all 500ms ease;
     -webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -ms-transition: all 500ms ease;
     -o-transition: all 500ms ease;
+    background-color: black;
+    z-index: 1;
 }
 
 .bigGalleryItem:hover {
     cursor: pointer;
-    box-shadow: 0 8px 8px -4px gray;
+    box-shadow: 0 10px 10px -4px #ccc;
+    z-index: 1000;
 }
 
 .bigGalleryItem:hover img {
-    transform: scale(1.02);
-    transform: rotate3d(90deg);
+    opacity: 0.5;
+}
+
+.bigGalleryItem:hover .order-now-button {
+    display: flex;
 }
 
 .bigGalleryHeader {
@@ -932,6 +958,7 @@ span.infoPane * {
     opacity: 0;
     top: 50px;
     font-size: 2rem;
+    text-transform: uppercase;
 }
 
 .bigGalleryBody {
@@ -940,6 +967,20 @@ span.infoPane * {
     position: relative;
     opacity: 0;
     top: 50px;
+}
+
+.order-now-button {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 #filter {
@@ -1006,7 +1047,7 @@ span.infoPane * {
     position: relative;
     text-align: center;
     width: 30vw;
-    max-height: 40vh;
+    max-height: 60vh;
 }
 
 .bigGallery {
@@ -1021,7 +1062,6 @@ span.infoPane * {
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    overflow: hidden;
 }
 
 #galleryHeading {
@@ -1031,7 +1071,8 @@ span.infoPane * {
     align-items: center;
     width: 100vw;
     margin: auto;
-    background: url('../img/strawberryCupcakeSmall.jpg') no-repeat fixed 0% 0%;
+    background: url('../img/strawberryCupcake.jpg') no-repeat fixed 0% 0%;
+    background-position: center !important;
     padding-top: 20vh;
     margin-bottom: 1vh;
     background-size: cover;
@@ -1048,7 +1089,7 @@ span.infoPane * {
 }
 
 #mobileHeader {
-    position: fixed;
+    position: absolute;
     display: none;
 }
 
@@ -1059,8 +1100,9 @@ span.infoPane * {
     height: 3.3vh;
 }
 
-#mobileHeader svg:hover {
-    transform: rotate(90deg);
+#mobileHeaderOpen {
+    padding: 4vh;
+    position: absolute;
 }
 
 #mobileHeaderOpen svg {
@@ -1076,34 +1118,72 @@ span.infoPane * {
     display: none;
 }
 
+#mobile-filter {
+    display: none;
+}
+
+#mobile-header {
+    display: none;
+}
+
 
 /*************** STYLES FOR HANDHELDS ***************/
 
-@media (max-width: 750px) {
-    header {
-        height: 100vh;
-        background-color: #67aeca;
-        position: fixed;
-        left: -100vw;
-        z-index: 1;
+@media(max-width:500px) {
+    #mainHeader {
+        font-size: 5rem !important;
     }
-    header ul {
+    .bigGallery div {
+        width: 100vw !important;
+        max-height: 100vh;
+    }
+    .bigGalleryItem {
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        display: none;
+    }
+    #mobile-header {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    #mobile-header-list {
         text-align: center;
-        flex-direction: column;
-        width: auto;
-        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #mobile-header-list li {
+        margin: 1vh 0;
+        padding: 1vh 0;
+        font-size: 1.5rem;
+    }
+    #mobile-logo {
+        font-size: 2.2rem !important;
+        text-transform: uppercase;
+        font-weight: 700;
     }
     #mobileHeader {
         display: block;
-        margin: 5vh;
         z-index: 1000;
     }
     #mobileHeader img {
-        height: 4vh;
-        display: none;
+        height: 5vh;
+        position: fixed;
+        z-index: 1000;
+        padding: 4vh;
     }
     #mobileHeaderClose {
-        display: block;
+        display: none;
     }
     #logo {
         font-weight: 700;
@@ -1127,28 +1207,35 @@ span.infoPane * {
         fill: white;
     }
     #mainHeader {
-        font-size: 5rem;
+        font-size: 3rem;
     }
     .mainWrapper {
         height: 100vh;
     }
     .big-red-button a {
-        padding: 4vh 22vw;
+        padding: 25px 25px;
+        border-radius: 50%;
+        box-shadow: 1px 3px 15px -7px black;
     }
     .big-red-button a span {
-        left: -12%;
+        left: 0;
+        display: none;
     }
     .big-red-button a svg {
         opacity: 1;
         left: 0;
+        margin: 0;
+        height: 5vh;
     }
     .contact-me-button a span {
         left: -5px;
+        display: none;
     }
     svg.env-icon {
         opacity: 1;
         left: 0px;
-        width: 5.5vw;
+        width: 9vw;
+        margin: 0;
     }
     .smallGallery div {
         width: 90vw;
@@ -1165,11 +1252,14 @@ span.infoPane * {
         max-width: 90vw;
         width: 80vw;
     }
-    #contact-me-button {
-        padding: 4vh 15vw;
+    #contact-me-button,
+    #contact-me-button-not-hidden {
+        padding: 25px 25px;
+        border-radius: 50%;
+        box-shadow: 1px 3px 15px -7px black;
     }
     #galleryHeading p {
-        width: 80vw;
+        max-width: 80vw;
     }
     span.infoPaneMain {
         top: 0;
@@ -1196,35 +1286,127 @@ span.infoPane * {
         width: 90vw;
     }
     form {
-        width: 80vw;
+        width: 90vw;
     }
     form input {
         height: 7vh;
     }
     select {
         height: 7vh;
+        padding-left: 2vw;
+        color: #9f9f9f;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+    }
+    .mobile-filter-header {
+        color: black;
+        margin-left: 5vw;
     }
     form button {
-        width: 80vw;
-        height: 7vh;
+        height: 8vh;
+        border-radius: 50%;
         background-color: #e52a6f !important;
         color: white;
+        box-shadow: 3px 3px 15px -7px black;
     }
     #submit svg {
         opacity: 1;
         left: 0px;
+        margin: 0;
+        height: 5vh;
+        width: 7vw;
     }
     form span {
         left: 0px;
         margin: 0 2vw;
+        display: none;
     }
     #galleryHeading {
         margin: auto;
         text-align: center;
+        padding-top: 15vh;
+        width: 100%;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: scroll;
+    }
+    div.slide h1 {
+        font-size: 3rem;
+    }
+    #filter ul {
+        flex-direction: column;
+    }
+    #filter ul li {
+        margin: 0;
+    }
+    .pricing-panel {
+        width: 100vw;
+        margin-bottom: 1vh;
+        border-bottom: none;
+    }
+    .bigGallery div {
+        width: 90vw;
+        max-height: 120vh;
+    }
+    .bigGalleryItem {
+        margin: 0 0 5vh 0;
+    }
+    span.infoPane {
+        height: 15vh;
+    }
+    .contactPage {
+        width: 100%;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: scroll;
+        background: url("../img/mobile-imgs/SingleCupcakePlateAngle-m.jpg") no-repeat 0% 0%;
+    }
+    #bioTitle {
+        font-size: 2rem !important;
+    }
+    #bioBody {
+        font-size: 1rem !important;
+    }
+    #about {
+        background-size: 100%;
+        width: 100%;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: scroll;
+    }
+    .action-banner {
+        background-size: 100%;
+        width: 100%;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: scroll;
+    }
+    #action-banner-one {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    #mobile-filter {
+        display: flex;
+        justify-content: flex-start;
+        width: 100vw;
+        align-items: center;
+    }
+    #filter {
+        display: none;
     }
 }
 
-.error{
+.error {
     color: red;
     font-style: italic;
 }

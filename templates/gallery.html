@@ -14,24 +14,33 @@
             <li id="macaroons">macaroons</li>
         </ul>
     </div>
+    <div id="mobile-filter">
+        <span class='mobile-filter-header'>Filter:</span>
+        <select id='mobile-filter-list-gallery'>
+            <option>all</option>
+            <option>cookies</option>
+            <option>cupcakes</option>
+            <option>bread</option>
+            <option>macaroons</option>
+        </select>
+    </div>
     <div class="bigGallery">
         {{ range . }}
-        <div class="bigGalleryItem {{ .Type }}">
-            <img src="{{ .Url }}" alt="{{ .Title }}">
-            <span class="order-now-button">Order now</span>
-            <span class="infoPane">
+        <a href="/contact">
+            <div class="bigGalleryItem {{ .Type }}">
+                <img src="{{ .Url }}" alt="{{ .Title }}">
+                <span class="order-now-button">Order {{ .Type }}</span>
+                <span class="infoPane">
                 <div id="infoPaneDetails">
                     <h1>{{ .Title }}</h1>
                     <p>{{ .Price }}</p>
                 </div>
-                <div id="info-pane-likes">
-                    <h2><img id="heart" src="../assets/img/icons/empty-heart.png"></h2><span>{{ .Likes }}</span>
-        </div>
-        </span>
+            </span>
+            </div>
+        </a>
+        {{ end }}
     </div>
-    {{ end }}
-</div>
-<div class="instaLink"><a href="https://www.instagram.com/thebakersboxcafe/">See more on Instagram</a></div>
+    <div class="instaLink"><a href="https://www.instagram.com/thebakersboxcafe/">See more on Instagram</a></div>
 </div>
 
 {{template "footer"}}

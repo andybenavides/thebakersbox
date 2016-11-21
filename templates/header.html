@@ -6,19 +6,19 @@
 <head>
     <title>The Bakers Box Cafe</title>
 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0"/>
+
+
     <link rel="stylesheet" href="../assets/styles/headerstyles.css" type="text/css">
     <link rel="stylesheet" href="../assets/styles/contact.css" type="text/css">
     <link rel="stylesheet" href="../assets/styles/mainstyles.css" type="text/css">
     <link rel="stylesheet" href="../assets/styles/footer.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
 <body>
     <header>
-        <div id="mobileHeaderClose">
-            <img class="svg" src="../assets/img/icons/1473768912_button_close.svg" />
-        </div>
         <ul>
             <span id="nav-links-pull-right"><li>
 			<a href="/" class="MenuLink" id="logo">The<br/> Bakers Box <br/>Cafe</a>
@@ -47,7 +47,20 @@
     </header>
     <div id="mobileHeader">
         <div id="mobileHeaderOpen">
-            <img src="../assets/img/icons/1473762264_menu-24.svg" />
+            <img class="svg" src="../assets/img/icons/1473762264_menu-24.svg" />
+        </div>
+        <div id="mobileHeaderClose">
+            <img class="svg" src="../assets/img/icons/close.png" />
+        </div>
+        <div id="mobile-header">
+            <ul id="mobile-header-list">
+                <li id="mobile-logo"><a href="/">The<br> Bakers Box<br> Cafe</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a>Mail</a></li>
+            </ul>
         </div>
     </div>
     {{end}} {{define "footer"}}
